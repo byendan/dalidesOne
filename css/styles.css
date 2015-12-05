@@ -11,5 +11,7 @@
     color: white;
     font-size: 48px;
     font-family: 'Kaushan Script', cursive; }
+  .front-brand-bar .credit {
+    display: none; }
 
 /*# sourceMappingURL=styles.css.map */
