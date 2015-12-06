@@ -107,4 +107,25 @@
       .nav-area .nava-area-1 .nav-item span {
         font-size: 14px; }
 
+.header-image-area {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background: url("../img/homeoffice.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin-top: -20px;
+  z-index: -5; }
+  .header-image-area h1 {
+    color: white;
+    padding-left: 20%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25%;
+    font-size: 50px; }
+  .header-image-area h1:first-child {
+    padding-left: 15%; }
+
 /*# sourceMappingURL=styles.css.map */
