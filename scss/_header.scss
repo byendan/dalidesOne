@@ -49,12 +49,13 @@
 }   
 
 .nav-area{
-    overflow: hidden;
+    
     width: 100%;
     margin-top: -35px;
+    z-index: 10;
     
     .nava-area-1{
-        overflow: hidden;
+        
         border: 0px solid black;
         width: 99%;
         height: 35px;
@@ -64,6 +65,60 @@
         
         ul {
             list-style-type: none;
+            
+            li {
+                
+                
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    list-style-type: none;
+                    width: 200px;
+                    background-color: white;
+                    border: 1px solid black;
+                   @include skew-x(20deg);
+                    margin-top: 4px;
+                    margin-left: -4px;
+                    padding: 0;
+                    li {
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                        border-bottom: 1px solid black;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        background-color: #f49057;
+                        
+                        a {
+                            display: inline-block;
+                            text-decoration: none;
+                            
+                            color: white;
+                            font-size: 16px;
+                            width: 100%;
+                        }
+                        
+                        &:hover {
+                            background-color: #f17128;
+                            @include transition-back(200ms);
+                        }
+                        
+                    }
+                    
+                }
+            }
+            
+            .drop-item:hover .dropdown-content {
+                display: block;
+            }
+            
+            .drop-item:click .dropdown-content {
+                display: block;
+            }
+            
+            .drop-item:hover span {
+                color: black;
+            }
         }
        
 
@@ -82,7 +137,7 @@
             
             .nav-fix {
                 @include skew-x(20deg);
-                
+                display:block;
                 a {
                     text-decoration: none;
                     color: white;
@@ -95,6 +150,10 @@
                 @include scaling(1.1, 1.1);
                 @include transition-back(500ms);
                 
+            }
+            
+            span {
+                font-size: 14px;
             }
             
         }
