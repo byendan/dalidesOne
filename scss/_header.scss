@@ -1,3 +1,29 @@
+@mixin skew-x($skewVal) {
+    -ms-transform: skewX($skewVal);
+    -webkit-transform: skewX($skewVal);
+    transform: skewX($skewVal);
+}
+
+@mixin skew-y($skewVal) {
+    -ms-transform: skewY($skewVal);
+    -webkit-transform: skewY($skewVal);
+    transform: skewY($skewVal);
+}
+
+@mixin scaling($width, $height) {
+    -ms-transform: scale($width, $height);
+    -webkit-transform: scale($width, $height);
+    transform: scale($width, $height);
+}
+
+@mixin transition-back($time) {
+    -webkit-transition: background-color $time linear;
+    -moz-transition: background-color $time linear;
+    -o-transition: background-color $time linear;
+    -ms-transition: background-color $time linear;
+    transition: background-color $time linear;
+}
+
 .front-brand-bar {
     position: relative;
     width: 100%;
@@ -9,9 +35,11 @@
     h1 {
     position: absolute;
     margin-left: 10px;
+    margin-top: 2px;
     color: white;
     font-size: 48px;
     font-family: 'Kaushan Script', cursive;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }   
     
     .credit {
@@ -19,3 +47,57 @@
     }
       
 }   
+
+.nav-area{
+    overflow: hidden;
+    width: 100%;
+    margin-top: -35px;
+    
+    .nava-area-1{
+        overflow: hidden;
+        border: 0px solid black;
+        width: 99%;
+        height: 35px;
+        background-color: black;
+        @include skew-x(-20deg);
+        margin-left: 5px;
+        
+        ul {
+            list-style-type: none;
+        }
+       
+
+        .nav-item {
+            float: left;
+            overflow: visible ;
+            border-left: 1px solid grey;
+            border-right: 1px solid grey;
+            height: 35px;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 7px;
+            background-color: black;
+            @include skew-x(-15deg);
+            
+            .nav-fix {
+                @include skew-x(20deg);
+                
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 16px;
+                }
+            }
+            
+            &:hover {
+                background-color: #F27B37;
+                @include scaling(1.1, 1.1);
+                @include transition-back(500ms);
+                
+            }
+            
+        }
+        
+    }
+}
