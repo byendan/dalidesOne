@@ -50,9 +50,14 @@
 
 .nav-area{
     
-    width: 100%;
+    width: 50%;
     margin-top: -35px;
+    margin-left: 15px;
     z-index: 10;
+    
+    @media screen and (max-width: 715px){
+                width: 90%;
+            }
     
     .nava-area-1{
         
@@ -63,8 +68,35 @@
         @include skew-x(-20deg);
         margin-left: 5px;
         
+        .collapsed-bar {
+            display: none;
+            
+            @media screen and (max-width: 715px){
+                display: block;
+            }
+            
+            button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                color: white;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                margin-top: none;
+                margin-bottom: none;
+                height: 100%;
+                padding-top: 5px;
+                font-size: 16px;
+            }
+        }
+        
         ul {
             list-style-type: none;
+            
+            @media screen and (max-width: 715px){
+                display: none;
+            }
             
             li {
                 
@@ -161,18 +193,22 @@
     }
 }
 
+
+
 .header-image-area {
     display: inline-block;
     position: relative;
     width: 100%;
-    background: url('../img/homeoffice.jpg');
+    background: url('../img/homeoffice.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 600px;
     margin-top: -20px;
     z-index: -5;
     
     h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
         color: white;
         padding-left: 20%;
         position: relative;
