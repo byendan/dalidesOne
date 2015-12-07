@@ -34,12 +34,10 @@
     transform: skewX(-20deg);
     margin-left: 5px; }
     .nav-area .nava-area-1 .collapsed-bar {
-      display: none; }
-      @media screen and (max-width: 715px) {
-        .nav-area .nava-area-1 .collapsed-bar {
-          display: block; } }
+      display: block;
+      position: relative; }
       .nav-area .nava-area-1 .collapsed-bar button {
-        display: block;
+        display: none;
         margin-left: auto;
         margin-right: auto;
         color: white;
@@ -51,11 +49,37 @@
         height: 100%;
         padding-top: 5px;
         font-size: 16px; }
+        @media screen and (max-width: 715px) {
+          .nav-area .nava-area-1 .collapsed-bar button {
+            display: block; } }
     .nav-area .nava-area-1 ul {
-      list-style-type: none; }
+      list-style-type: none;
+      position: relative; }
       @media screen and (max-width: 715px) {
         .nav-area .nava-area-1 ul {
-          display: none; } }
+          display: none;
+          position: absolute;
+          list-style-type: none;
+          -ms-transform: skewX(20deg);
+          -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+          width: 100%;
+          background-color: black;
+          margin-left: 20px;
+          padding: 0; }
+          .nav-area .nava-area-1 ul li {
+            display: block;
+            text-align: center;
+            width: 100%;
+            border-left: none;
+            border-right: none;
+            background-color: transparent;
+            border-bottom: 1px solid black;
+            padding-top: 5px;
+            padding-bottom: 5px; }
+            .nav-area .nava-area-1 ul li a {
+              background-color: tansparent;
+              border: none; } }
       .nav-area .nava-area-1 ul li .dropdown-content {
         display: none;
         position: absolute;
@@ -92,8 +116,6 @@
             transition: background-color 200ms linear; }
       .nav-area .nava-area-1 ul .drop-item:hover .dropdown-content {
         display: block; }
-      .nav-area .nava-area-1 ul .drop-item:click .dropdown-content {
-        display: block; }
       .nav-area .nava-area-1 ul .drop-item:hover span {
         color: black; }
     .nav-area .nava-area-1 .nav-item {
@@ -110,27 +132,55 @@
       -ms-transform: skewX(-15deg);
       -webkit-transform: skewX(-15deg);
       transform: skewX(-15deg); }
+      @media screen and (max-width: 715px) {
+        .nav-area .nava-area-1 .nav-item {
+          -ms-transform: skewX(0deg);
+          -webkit-transform: skewX(0deg);
+          transform: skewX(0deg);
+          border-left: none;
+          border-right: none;
+          width: 100%;
+          position: relative;
+          height: 100%; }
+          .nav-area .nava-area-1 .nav-item .dropdown-content {
+            -ms-transform: skewX(0deg);
+            -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+            width: 90%;
+            margin-left: 5px;
+            position: absolute;
+            height: 100%; } }
       .nav-area .nava-area-1 .nav-item .nav-fix {
         -ms-transform: skewX(20deg);
         -webkit-transform: skewX(20deg);
         transform: skewX(20deg);
         display: block; }
+        @media screen and (max-width: 715px) {
+          .nav-area .nava-area-1 .nav-item .nav-fix {
+            -ms-transform: skewX(0deg);
+            -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); } }
         .nav-area .nava-area-1 .nav-item .nav-fix a {
           text-decoration: none;
           color: white;
           font-size: 16px; }
       .nav-area .nava-area-1 .nav-item:hover {
         background-color: #F27B37;
-        -ms-transform: scale(1.1, 1.1);
-        -webkit-transform: scale(1.1, 1.1);
-        transform: scale(1.1, 1.1);
         -webkit-transition: background-color 500ms linear;
         -moz-transition: background-color 500ms linear;
         -o-transition: background-color 500ms linear;
         -ms-transition: background-color 500ms linear;
         transition: background-color 500ms linear; }
+        @media screen and (min-width: 716px) {
+          .nav-area .nava-area-1 .nav-item:hover {
+            -ms-transform: scale(1.1, 1.1);
+            -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); } }
       .nav-area .nava-area-1 .nav-item span {
         font-size: 14px; }
+
+ul.navs.active {
+  display: block; }
 
 .header-image-area {
   display: inline-block;

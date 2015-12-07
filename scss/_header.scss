@@ -68,15 +68,14 @@
         @include skew-x(-20deg);
         margin-left: 5px;
         
+        
         .collapsed-bar {
-            display: none;
+            display: block;
+            position: relative;
             
-            @media screen and (max-width: 715px){
-                display: block;
-            }
             
             button {
-                display: block;
+                display: none;
                 margin-left: auto;
                 margin-right: auto;
                 color: white;
@@ -88,14 +87,46 @@
                 height: 100%;
                 padding-top: 5px;
                 font-size: 16px;
+                
+                @media screen and (max-width: 715px){
+                    display: block;
+                }
             }
         }
         
+        
+        
         ul {
             list-style-type: none;
-            
+            position: relative;
             @media screen and (max-width: 715px){
                 display: none;
+                position: absolute;
+                list-style-type: none;
+                @include skew-x(20deg);
+                width: 100%;
+                background-color: black;
+                margin-left: 20px;
+                padding: 0;
+                
+                li {
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    border-left: none;
+                    border-right: none;
+                    background-color: transparent;
+                    border-bottom: 1px solid black;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    
+                    a {
+                        background-color: tansparent;
+                        border: none;
+                    }
+                }
+                
+                
             }
             
             li {
@@ -144,9 +175,7 @@
                 display: block;
             }
             
-            .drop-item:click .dropdown-content {
-                display: block;
-            }
+            
             
             .drop-item:hover span {
                 color: black;
@@ -155,6 +184,7 @@
        
 
         .nav-item {
+            
             float: left;
             overflow: visible ;
             border-left: 1px solid grey;
@@ -167,9 +197,37 @@
             background-color: black;
             @include skew-x(-15deg);
             
+            @media screen and (max-width:715px){
+                @include skew-x(0deg);
+                border-left: none;
+                border-right: none;
+                width: 100%;
+                position: relative;
+                
+                height: 100%;
+                
+                .dropdown-content {
+                    @include skew-x(0deg);
+                    width: 90%;
+                    margin-left: 5px;
+                    
+                    position: absolute;
+                    height: 100%;
+                    
+                        
+                }
+                
+            }
+            
             .nav-fix {
                 @include skew-x(20deg);
                 display:block;
+                
+                @media screen and (max-width:715px){
+                    @include skew-x(0deg);    
+                }
+                
+                
                 a {
                     text-decoration: none;
                     color: white;
@@ -179,8 +237,12 @@
             
             &:hover {
                 background-color: #F27B37;
-                @include scaling(1.1, 1.1);
+                
                 @include transition-back(500ms);
+                
+                @media screen and (min-width:716px){
+                    @include scaling(1.1, 1.1);
+                }
                 
             }
             
@@ -192,6 +254,10 @@
         
     }
 }
+
+ul.navs.active{
+            display: block;
+        }
 
 
 
