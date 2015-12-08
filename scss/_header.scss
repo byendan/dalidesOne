@@ -250,16 +250,14 @@
                 }
             }
             
-            &:hover {
+            @media screen and (min-width:716px) {
+                &:hover {
                 background-color: #F27B37;
-                
                 @include transition-back(500ms);
-                
-                @media screen and (min-width:716px){
-                    @include scaling(1.1, 1.1);
-                }
-                
+                @include scaling(1.1, 1.1);
+                } 
             }
+            
             
             span {
                 font-size: 14px;

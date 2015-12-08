@@ -123,9 +123,12 @@
             $(this).children(".dropdown-content").slideToggle();
         });
         
-        $(".drop-item").hover(function() {
-            $(this).children(".dropdown-content").slideToggle(200);
-        }); 
+        if($(window).width() > 715) {
+            $(".drop-item").hover(function() {
+                $(this).children(".dropdown-content").slideToggle(200);
+            }); 
+        }
+        
     </script>
     
 
