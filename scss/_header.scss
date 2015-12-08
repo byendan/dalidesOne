@@ -109,7 +109,13 @@
                 margin-left: 20px;
                 padding: 0;
                 
-                li {
+                .drop-area {
+                    display: block;
+                    width: 100%;
+                    background-color: black;
+                    
+                    
+                    li {
                     display: block;
                     text-align: center;
                     width: 100%;
@@ -120,11 +126,14 @@
                     padding-top: 5px;
                     padding-bottom: 5px;
                     
-                    a {
-                        background-color: tansparent;
-                        border: none;
+                        a {
+                            background-color: tansparent;
+                            border: none;
+                        }
                     }
+                    
                 }
+                
                 
                 
             }
@@ -171,14 +180,23 @@
                 }
             }
             
-            .drop-item:hover .dropdown-content {
-                display: block;
+            @media screen and (min-width:716px) {
+                .drop-item:hover .dropdown-content {
+//                    display: block;
+                }
+            
             }
             
             
             
             .drop-item:hover span {
                 color: black;
+            }
+            
+            .drop-item {
+                .dropdown-content.active {
+//                    display: block;
+                }
             }
         }
        
@@ -203,17 +221,14 @@
                 border-right: none;
                 width: 100%;
                 position: relative;
-                
                 height: 100%;
                 
                 .dropdown-content {
                     @include skew-x(0deg);
-                    width: 90%;
-                    margin-left: 5px;
-                    
-                    position: absolute;
+                    width: 100%;
+                    position: relative;
                     height: 100%;
-                    
+                   
                         
                 }
                 
@@ -255,9 +270,11 @@
     }
 }
 
-ul.navs.active{
-            display: block;
-        }
+//ul.navs.active{
+//            display: block;
+//            left: 20px;
+//            right: 20px;
+//}
 
 
 

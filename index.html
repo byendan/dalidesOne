@@ -55,9 +55,11 @@
                 <li class="nav-item drop-item">
                     <div class="nav-fix drop-button"><a href="#">Examples <span class="glyphicon glyphicon-chevron-down"></span></a></div>
                     <ul class="dropdown-content">
+                        <div class="drop-area">
                         <li><a href="#">Item 1</a></li>
                         <li><a href="#">Item 2</a></li>
-                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                        </div>
                     </ul>
                 </li>
                 
@@ -114,10 +116,16 @@
     <script>
         $( ".collapse-button" ).click(function() {
             $(".navs").toggleClass('active');
+            $(".navs").slideToggle();
         });
         $(".drop-item").click(function() {
-            $(".dropdown-content").toggleClass('active');
+            $(this).children(".dropdown-content").toggleClass('active');
+            $(this).children(".dropdown-content").slideToggle();
         });
+        
+        $(".drop-item").hover(function() {
+            $(this).children(".dropdown-content").slideToggle(200);
+        }); 
     </script>
     
 

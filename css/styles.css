@@ -67,19 +67,23 @@
           background-color: black;
           margin-left: 20px;
           padding: 0; }
-          .nav-area .nava-area-1 ul li {
+          .nav-area .nava-area-1 ul .drop-area {
             display: block;
-            text-align: center;
             width: 100%;
-            border-left: none;
-            border-right: none;
-            background-color: transparent;
-            border-bottom: 1px solid black;
-            padding-top: 5px;
-            padding-bottom: 5px; }
-            .nav-area .nava-area-1 ul li a {
-              background-color: tansparent;
-              border: none; } }
+            background-color: black; }
+            .nav-area .nava-area-1 ul .drop-area li {
+              display: block;
+              text-align: center;
+              width: 100%;
+              border-left: none;
+              border-right: none;
+              background-color: transparent;
+              border-bottom: 1px solid black;
+              padding-top: 5px;
+              padding-bottom: 5px; }
+              .nav-area .nava-area-1 ul .drop-area li a {
+                background-color: tansparent;
+                border: none; } }
       .nav-area .nava-area-1 ul li .dropdown-content {
         display: none;
         position: absolute;
@@ -114,8 +118,6 @@
             -o-transition: background-color 200ms linear;
             -ms-transition: background-color 200ms linear;
             transition: background-color 200ms linear; }
-      .nav-area .nava-area-1 ul .drop-item:hover .dropdown-content {
-        display: block; }
       .nav-area .nava-area-1 ul .drop-item:hover span {
         color: black; }
     .nav-area .nava-area-1 .nav-item {
@@ -146,9 +148,8 @@
             -ms-transform: skewX(0deg);
             -webkit-transform: skewX(0deg);
             transform: skewX(0deg);
-            width: 90%;
-            margin-left: 5px;
-            position: absolute;
+            width: 100%;
+            position: relative;
             height: 100%; } }
       .nav-area .nava-area-1 .nav-item .nav-fix {
         -ms-transform: skewX(20deg);
@@ -178,9 +179,6 @@
             transform: scale(1.1, 1.1); } }
       .nav-area .nava-area-1 .nav-item span {
         font-size: 14px; }
-
-ul.navs.active {
-  display: block; }
 
 .header-image-area {
   display: inline-block;
