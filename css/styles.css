@@ -118,6 +118,9 @@
             -o-transition: background-color 200ms linear;
             -ms-transition: background-color 200ms linear;
             transition: background-color 200ms linear; }
+      @media screen and (max-width: 715px) {
+        .nav-area .nava-area-1 ul li span {
+          color: white; } }
       @media screen and (min-width: 716px) {
         .nav-area .nava-area-1 ul .drop-item:hover span {
           color: black; } }
@@ -202,6 +205,10 @@
     font-size: 50px; }
   .header-image-area h1:first-child {
     padding-left: 15%; }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
 
 .post-header-bar {
   background-color: #90CF8A;
