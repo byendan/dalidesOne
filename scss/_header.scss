@@ -215,6 +215,11 @@
             background-color: black;
             @include skew-x(-15deg);
             
+            a {
+                display: inline-block;
+                width: 100%;
+            }
+            
             @media screen and (max-width:715px){
                 @include skew-x(0deg);
                 border-left: none;
@@ -222,6 +227,10 @@
                 width: 100%;
                 position: relative;
                 height: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-top: 1px solid grey;
+                border-bottom: 1px solid grey;
                 
                 .dropdown-content {
                     @include skew-x(0deg);
