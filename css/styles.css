@@ -221,25 +221,52 @@ html, body {
   background-color: #90CF8A;
   height: 100px; }
 
-.post-head-col {
-  display: inline-block;
-  height: 600px;
-  border-right: solid 1px rgba(128, 128, 128, 0.5);
-  border-left: solid 1px rgba(128, 128, 128, 0.5); }
-  .post-head-col .bubble {
-    display: block;
+.bubble-box {
+  display: block;
+  width: 100%;
+  text-align: center; }
+  .bubble-box .bubble-area {
+    display: inline-block;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    width: 200px;
-    height: 200px;
-    background-color: #90CF8A;
-    text-align: center;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%; }
-    .post-head-col .bubble span {
-      font-size: 100px;
-      margin-top: 50px; }
+    padding-left: 20px;
+    padding-right: 20px; }
+    @media screen and (max-width: 954px) {
+      .bubble-box .bubble-area {
+        width: 100%; } }
+    .bubble-box .bubble-area .post-head-col {
+      display: inline;
+      height: 600px;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 30%;
+      min-width: 305px;
+      border-right: solid 1px rgba(128, 128, 128, 0.5);
+      border-left: solid 1px rgba(128, 128, 128, 0.5);
+      float: left; }
+      @media screen and (max-width: 954px) {
+        .bubble-box .bubble-area .post-head-col {
+          max-width: 100%;
+          min-width: 100%;
+          border: solid 1px rgba(128, 128, 128, 0.5); } }
+      .bubble-box .bubble-area .post-head-col .bubble {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: #90CF8A;
+        text-align: center;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        border-radius: 100%; }
+        @media screen and (max-width: 954px) {
+          .bubble-box .bubble-area .post-head-col .bubble {
+            margin-top: 50px; } }
+        .bubble-box .bubble-area .post-head-col .bubble span {
+          font-size: 100px;
+          margin-top: 50px; }
 
 /*# sourceMappingURL=styles.css.map */
