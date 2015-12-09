@@ -118,8 +118,9 @@
             -o-transition: background-color 200ms linear;
             -ms-transition: background-color 200ms linear;
             transition: background-color 200ms linear; }
-      .nav-area .nava-area-1 ul .drop-item:hover span {
-        color: black; }
+      @media screen and (min-width: 716px) {
+        .nav-area .nava-area-1 ul .drop-item:hover span {
+          color: black; } }
     .nav-area .nava-area-1 .nav-item {
       float: left;
       overflow: visible;
