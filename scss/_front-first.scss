@@ -80,8 +80,11 @@ $infocol-color: rgba(255, 177, 0, 0.48);
                     font-size: 100px;
                     margin-top: 50px;
                 }
+                
             
             }
+            
+            
             
             position: relative;
             
@@ -106,8 +109,11 @@ $infocol-color: rgba(255, 177, 0, 0.48);
                 letter-spacing: 0px;
                 
             }
+            
         }
-        
+        .post-head-col:last-child .bubble span {
+                margin-left: 15px;
+            }
     
     }
 }

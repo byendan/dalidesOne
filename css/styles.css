@@ -286,5 +286,7 @@ html, body {
         padding-top: 10px;
         margin-bottom: 0px;
         letter-spacing: 0px; }
+    .bubble-box .bubble-area .post-head-col:last-child .bubble span {
+      margin-left: 15px; }
 
 /*# sourceMappingURL=styles.css.map */
