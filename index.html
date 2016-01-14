@@ -26,6 +26,10 @@
     
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     
+    <link href='https://fonts.googleapis.com/css?family=Cantarell:400,400italic' rel='stylesheet' type='text/css'>
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -123,17 +127,23 @@
 
      </div>
     
-    <div class="verticle-one">
-        <div class="left-box">
+    <div class="verticle-one vert">
+        <div class="left-box vert-box">
+            <h2 class="vert-head">Simple and Sleek</h2>
+            <hr class="vert-line" />
+            <p class="vert-text">We build beautiful and simple landing pages that get your customers interested and ready to read more</p>
         </div>
-        <div class="right-box">
+        <div class="right-box vert-box">
+            <div class="box-overlay">
+                
+            </div>
         </div>
     </div>
     
-    <div class="verticle-two">
-        <div class="left-box">
+    <div class="verticle-two vert">
+        <div class="left-box vert-box">
         </div>
-        <div class="right-box">
+        <div class="right-box vert-box">
         </div>
     </div>
 
@@ -144,24 +154,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
-    <script>
-        $( ".collapse-button" ).click(function() {
-            $(".navs").toggleClass('active');
-            $(".navs").slideToggle();
-        });
-        $(".drop-item").click(function() {
-            $(this).children(".dropdown-content").toggleClass('active');
-            $(this).children(".dropdown-content").slideToggle();
-        });
-        
-        if($(window).width() > 715) {
-            $(".drop-item").hover(function() {
-                $(this).children(".dropdown-content").slideToggle(200);
-            }); 
-        }
-        
-    </script>
+    <!-- Navbar Script -->
+    <script src="js/navscript.js"></script>
     
+   
 
 </body>
 
