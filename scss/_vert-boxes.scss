@@ -1,24 +1,50 @@
+$bubble-colapse: 962px;
+$vert-mobile-colapse: 590px;
+$mobile-small: 450px;
+
 .vert {
-    height: 600px;
+    
     width: 100%;
     border-top: solid 1px grey;
     background: #fcfcfc;
-    
+   
     .vert-box {
-        height: 100%;
-        
+        height: 600px;
         display: inline-block;
+        
     }
+    
+    .vt-box {
+        @media screen and (max-width:$bubble-colapse) and (min-width:$vert-mobile-colapse) {
+            height: 300px;      
+        }
+        
+        @media screen and (max-width:$vert-mobile-colapse) {
+            height: 400px;
+        }
+        
+        @media screen and (max-width:$mobile-small) {
+            height: 500px;
+        }
+    }
+    
     .left-box {
         float: left;
         width: 40%;
-        
+        @media screen and (max-width:$bubble-colapse) {
+            width: 100%;      
+        }
     }
     .right-box {
         float: right;
         width: 60%;
-    
+        @media screen and (max-width:$bubble-colapse) {
+            width: 100%;
+            
+        }
     }
+    
+    
 }
 
 .verticle-one {
@@ -33,6 +59,10 @@
             font-style: italic;
             margin-left: 5%;
             margin-top: 20%;
+            
+            @media screen and (max-width:$bubble-colapse) {
+                margin-top: 5%;     
+            }
         }
         
         .vert-line {
@@ -45,8 +75,14 @@
             color: white;
             font-weight: 300;
             font-size: 2.4em;
-            margin-left: 10%;
+            margin-left: 7%;
+            padding-right: 5px;
             margin-top: 10%;
+            
+            @media screen and (max-width:$bubble-colapse) {
+                margin-top: 5%;     
+            }
+            
         }
     }
     
@@ -54,7 +90,20 @@
         background-image: url("../img/ov-test.png");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;        
+        background-position: center; 
+        
+        @media screen and (max-width:$bubble-colapse) and(min-width:$vert-mobile-colapse) {
+            background-image: url("../img/ov-small.png");
+            background-position: left;
+        }
+        
+        @media screen and (max-width:$vert-mobile-colapse) {
+            background-image: url("../img/ov-mobile-original.png");
+        }
+        
+        @media screen and (max-width:$mobile-small) {
+            background-image: url("../img/ov-mobile-small.png");
+        }
     }
 }
 

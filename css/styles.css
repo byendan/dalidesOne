@@ -230,17 +230,17 @@ html, body {
   background-color: rgba(255, 177, 0, 0.48); }
   @media screen and (max-width: 962px) {
     .bubble-box {
-      background-color: transparent; } }
+      height: 1800px; } }
   .bubble-box .bubble-area {
     background-color: transparent;
+    height: 100%;
     display: inline-block;
     letter-spacing: 20px; }
     @media screen and (max-width: 962px) {
       .bubble-box .bubble-area {
         width: 100%;
         padding-left: 20px;
-        padding-right: 20px;
-        background-color: rgba(255, 177, 0, 0.48); } }
+        padding-right: 20px; } }
     .bubble-box .bubble-area .post-head-col {
       display: inline-block;
       height: 600px;
@@ -290,19 +290,33 @@ html, body {
       margin-left: 15px; }
 
 .vert {
-  height: 600px;
   width: 100%;
   border-top: solid 1px grey;
   background: #fcfcfc; }
   .vert .vert-box {
-    height: 100%;
+    height: 600px;
     display: inline-block; }
+  @media screen and (max-width: 962px) and (min-width: 590px) {
+    .vert .vt-box {
+      height: 300px; } }
+  @media screen and (max-width: 590px) {
+    .vert .vt-box {
+      height: 400px; } }
+  @media screen and (max-width: 450px) {
+    .vert .vt-box {
+      height: 500px; } }
   .vert .left-box {
     float: left;
     width: 40%; }
+    @media screen and (max-width: 962px) {
+      .vert .left-box {
+        width: 100%; } }
   .vert .right-box {
     float: right;
     width: 60%; }
+    @media screen and (max-width: 962px) {
+      .vert .right-box {
+        width: 100%; } }
 
 .verticle-one .left-box {
   background-color: #2A2826; }
@@ -313,6 +327,9 @@ html, body {
     font-style: italic;
     margin-left: 5%;
     margin-top: 20%; }
+    @media screen and (max-width: 962px) {
+      .verticle-one .left-box .vert-head {
+        margin-top: 5%; } }
   .verticle-one .left-box .vert-line {
     width: 80%;
     margin-left: 5%; }
@@ -321,13 +338,27 @@ html, body {
     color: white;
     font-weight: 300;
     font-size: 2.4em;
-    margin-left: 10%;
+    margin-left: 7%;
+    padding-right: 5px;
     margin-top: 10%; }
+    @media screen and (max-width: 962px) {
+      .verticle-one .left-box .vert-text {
+        margin-top: 5%; } }
 .verticle-one .right-box {
   background-image: url("../img/ov-test.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+  @media screen and (max-width: 962px) and (min-width: 590px) {
+    .verticle-one .right-box {
+      background-image: url("../img/ov-small.png");
+      background-position: left; } }
+  @media screen and (max-width: 590px) {
+    .verticle-one .right-box {
+      background-image: url("../img/ov-mobile-original.png"); } }
+  @media screen and (max-width: 450px) {
+    .verticle-one .right-box {
+      background-image: url("../img/ov-mobile-small.png"); } }
 
 .box-overlay {
   width: 100%;

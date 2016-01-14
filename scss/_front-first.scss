@@ -24,12 +24,12 @@ $infocol-color: rgba(255, 177, 0, 0.48);
     background-color: $infocol-color;
     
     @media screen and (max-width:$bubble-colapse) {
-        background-color: transparent;
+        height: 1800px;
     }
     
     .bubble-area {
         background-color: transparent;
-        
+        height: 100%;
         display: inline-block;
         letter-spacing: 20px;
         
@@ -38,7 +38,7 @@ $infocol-color: rgba(255, 177, 0, 0.48);
             width: 100%;
             padding-left: 20px;
             padding-right: 20px;
-            background-color: $infocol-color;
+            
         }
         
         
