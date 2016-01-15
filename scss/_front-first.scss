@@ -4,14 +4,48 @@
 	border-radius: $value;
 }
 
+@mixin bubble-color($t) {
+    
+    -webkit-transition: color $t;
+    transition: color $t;
+        
+    
+}
+
 $bubble-colapse: 962px;
 $min-bubble: 305px;
-$infocol-color: rgba(255, 177, 0, 0.48);
+$infocol-color: #ffffff;
 
 
 .post-header-bar {
-    background-color: #90CF8A;
+    position: relative;
+    margin-top: -25px;
+    background-color: #2A2826;
     height: 100px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: 300;
+    font-size: 2.4em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    border-bottom: solid 5px #90CF8A;
+    
+    h1 {
+        color: #F7992E;
+    }
+    
+    P {
+        margin-top: 45px;
+        margin-bottom: 15px;
+        font-size: 0.8em;
+        color: black;
+    }
+    
+    .qhr {
+        width: 130px;
+        border-color: #DC3E32;
+    }
     
     
 }
@@ -68,7 +102,9 @@ $infocol-color: rgba(255, 177, 0, 0.48);
                 margin-top: 100px;
                 width: 200px;
                 height: 200px;
-                background-color: #90CF8A;
+                background-color: rgba(144, 207, 138, 0.77);
+                border: solid 4px rgb(247, 153, 46);
+                box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
                 text-align: center;
                 @include round(100%);
                 
@@ -79,6 +115,14 @@ $infocol-color: rgba(255, 177, 0, 0.48);
                 span {
                     font-size: 100px;
                     margin-top: 50px;
+                    @include bubble-color(1s);
+                }
+                
+                &:hover {
+                    cursor: pointer;
+                    span {
+                        color: #DC3E32;
+                    }
                 }
                 
             
@@ -89,6 +133,17 @@ $infocol-color: rgba(255, 177, 0, 0.48);
             position: relative;
             
           
+            .bub-txt-box {
+                margin-top: 15px;
+                padding: 3px;
+                padding-top: 1px;
+                border: solid 1px grey;
+                height: 40%;
+                width: 100%;
+                display: inline-block;
+                @include round(5px);
+                box-shadow: 0px 0px 5px rgb(0, 0, 0);
+            }
             
             h2 {
                 font-family: 'Montserrat', sans-serif;
@@ -98,10 +153,10 @@ $infocol-color: rgba(255, 177, 0, 0.48);
             }
             
             .bubble-text {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Lato', sans-serif;
                 position: absolute;
-                font-weight: 100;
-                font-size: 18px;
+                font-weight: 300;
+                font-size: 20px;
                 padding-left: 10px;
                 padding-right: 10px;
                 padding-top: 10px;

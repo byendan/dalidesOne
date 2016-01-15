@@ -102,7 +102,7 @@
             text-decoration: none;
             
             &:before {
-                background-color: #DC3F30;
+                background-color: #03726F;
                 width: 20px;
                 @include round(10px);
                 @include scale-x(4);
@@ -161,7 +161,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
-    margin-top: -20px;
+   
     z-index: -5;
     
     .head-over {
