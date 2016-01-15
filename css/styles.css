@@ -36,7 +36,9 @@
     border-radius: 100%;
     width: 0px;
     height: 100%;
+    -webkit-transition: transform 1.2s, background-color 1s, border-radius 2s;
     transition: transform 1.2s, background-color 1s, border-radius 2s;
+    -webkit-transition-timing-function: ease;
     transition-timing-function: ease; }
   .navbar-default .navbar-nav > div a {
     color: white;
@@ -44,10 +46,6 @@
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    -webkit-transition: width 1s, height 1s, background-color 1s;
-    transition: width 1s, height 1s, background-color 1s;
-    -webkit-transition-timing-function: ease;
-    transition-timing-function: ease;
     padding: 7px;
     display: inline-block; }
     .navbar-default .navbar-nav > div a:hover {
@@ -56,6 +54,8 @@
       .navbar-default .navbar-nav > div a:hover:before {
         background-color: #DC3F30;
         width: 20px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
         border-radius: 10px;
         -ms-transform: scale(4);
         /* IE 9 */

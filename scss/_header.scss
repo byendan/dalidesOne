@@ -30,12 +30,19 @@
 	border-radius: $value;
 }
 
-@mixin button-inflate($time) {
-    -webkit-transition: width $time, height $time, background-color $time;
-    transition: width $time, height $time, background-color $time;
+@mixin button-inflate($t1, $t2, $t3) {
     
+    -webkit-transition: transform $t1, background-color $t2, border-radius $t3;
+    transition: transform $t1, background-color $t2, border-radius $t3;
+        
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
+}
+
+@mixin scale-x($value) {
+    -ms-transform: scale($value); /* IE 9 */
+    -webkit-transform: scale($value); /* Safari */
+    transform: scale($value); /* Standard syntax */
 }
 
 
@@ -79,15 +86,14 @@
         border-radius: 100%;
         width: 0px;
         height: 100%;
-        transition: transform 1.2s, background-color 1s, border-radius 2s;
-        transition-timing-function: ease;
+        @include button-inflate(1.2s, 1s, 2s);
+        
     }
     
     a {
         color: white;
         background: transparent;
         @include round(10px);
-        @include button-inflate(1s);
         padding: 7px;
         display: inline-block;
         
@@ -98,10 +104,8 @@
             &:before {
                 background-color: #DC3F30;
                 width: 20px;
-                border-radius: 10px;
-                -ms-transform: scale(4); /* IE 9 */
-                -webkit-transform: scale(4); /* Safari */
-                transform: scale(4); /* Standard syntax */
+                @include round(10px);
+                @include scale-x(4);
             }
             
             
