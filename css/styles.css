@@ -7,11 +7,26 @@
   @media screen and (max-width: 767px) {
     .navbar-default {
       right: 10px;
-      top: 25px; } }
+      top: 45px; }
+      .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: transparent; } }
+  @media screen and (max-width: 360px) {
+    .navbar-default {
+      right: 2px;
+      top: 50px; } }
 
 .navbar-default .navbar-nav {
   margin-top: 20px; }
+  @media screen and (max-width: 767px) {
+    .navbar-default .navbar-nav {
+      margin-top: 10px; } }
 
+@media screen and (max-width: 360px) {
+  .navbar-toggle {
+    padding: 5px; }
+    .navbar-toggle .icon-bar {
+      width: 18px;
+      font-size: 20px; } }
 .navbar-default .navbar-nav > div {
   border: solid 1px white;
   display: inline-block;
@@ -62,6 +77,12 @@
         /* Safari */
         transform: scale(4);
         /* Standard syntax */ }
+  @media screen and (max-width: 767px) {
+    .navbar-default .navbar-nav > div {
+      margin-top: 5px;
+      margin-left: 15px;
+      margin-right: 5px;
+      background-color: #03726F; } }
 
 .front-brand-bar {
   position: relative;

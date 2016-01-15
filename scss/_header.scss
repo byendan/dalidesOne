@@ -1,5 +1,3 @@
-
-
 @mixin round($value) {
     -moz-border-radius: $value;
 	-webkit-border-radius: $value;
@@ -30,12 +28,40 @@
     
     @media screen and (max-width:767px) {
         right: 10px;
-        top: 25px;
+        top: 45px;
+        
+        .navbar-toggle:focus, .navbar-toggle:hover {
+            background-color: transparent;
+        }
+    }
+    
+    @media screen and (max-width:360px) {
+        right: 2px;
+        top: 50px;
     }
 }
 
 .navbar-default .navbar-nav {
     margin-top: 20px;
+    
+    @media screen and (max-width: 767px) {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    
+    
+    .navbar-toggle {
+        padding: 5px;
+        
+        .icon-bar {
+            width: 18px;
+            font-size: 20px;
+        }
+    }
+    
+
 }
 
 .navbar-default .navbar-nav > div {
@@ -63,7 +89,6 @@
         height: 100%;
         overflow: hidden;
         @include button-inflate(0.7s, 0.7s, 2s);
-        
     }
     
     a {
@@ -82,13 +107,17 @@
                 width: 20px;
                 border-radius: 10px;
                 @include scale-x(4);
-            }
-            
-            
+            }      
         }
     }
+    
+    @media screen and (max-width: 767px) {
+        margin-top: 5px;
+        margin-left: 15px;
+        margin-right: 5px;
+        background-color: #03726F;
+    }
 }
-
 
 .front-brand-bar {
     position: relative;
@@ -110,8 +139,7 @@
     
     .credit {
         display: none;
-    }
-      
+    }    
 }   
 
 .over-bar {
@@ -122,10 +150,6 @@
     background-color: #3b3b3b;
 }
 
-
-
-
-
 .header-image-area {
     display: inline-block;
     position: relative;
@@ -134,7 +158,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
-   
     z-index: -5;
     
     .head-over {
@@ -157,14 +180,8 @@
                  padding-left: 15%;
                  margin-top: 0px;
              }
-        }
-    
-   
-        
-        
+        }     
     }
-   
-    
 }
 
 html, body {
