@@ -349,27 +349,44 @@ html, body {
       .verticle-one .left-box .vert-text {
         margin-top: 5%; } }
 .verticle-one .right-box {
-  background-image: url("../img/ov-test.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
-  @media screen and (max-width: 962px) and (min-width: 590px) {
+  background-color: #2A2826; }
+  @media screen and (max-width: 962px) {
     .verticle-one .right-box {
-      background-image: url("../img/ov-small.png");
-      background-position: left; } }
-  @media screen and (max-width: 590px) {
-    .verticle-one .right-box {
-      background-image: url("../img/ov-mobile-original.png"); } }
-  @media screen and (max-width: 450px) {
-    .verticle-one .right-box {
-      background-image: url("../img/ov-mobile-small.png"); } }
+      padding: 20px; } }
+  .verticle-one .right-box .vbr {
+    background-image: url("../img/ov-test.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%; }
+    @media screen and (max-width: 962px) and (min-width: 590px) {
+      .verticle-one .right-box .vbr {
+        background-image: url("../img/ov-small.png");
+        background-position: left; } }
+    @media screen and (max-width: 590px) {
+      .verticle-one .right-box .vbr {
+        background-image: url("../img/ov-mobile-original.png"); } }
+    @media screen and (max-width: 450px) {
+      .verticle-one .right-box .vbr {
+        background-image: url("../img/ov-mobile-small.png"); } }
+    @media screen and (max-width: 962px) {
+      .verticle-one .right-box .vbr {
+        background-size: contain;
+        background-color: #2A2826; } }
+    @media screen and (max-width: 890px) {
+      .verticle-one .right-box .vbr {
+        margin-top: -40px; } }
+    @media screen and (max-width: 500px) {
+      .verticle-one .right-box .vbr {
+        margin-top: -60px; } }
 
-.box-overlay {
-  width: 100%;
-  height: 100%;
-  transition: background-color 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.67); }
-  @media screen and (min-width: 715px) {
+@media screen and (min-width: 962px) {
+  .box-overlay {
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.67); }
     .box-overlay:hover {
       background-color: rgba(0, 0, 0, 0.42); } }
 
