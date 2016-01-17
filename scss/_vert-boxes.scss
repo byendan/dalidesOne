@@ -135,8 +135,10 @@ $mobile-small: 450px;
 }
 
 .verticle-two {
-   // background-color: #3b3b3b; 
-    
+    background-color: #3b3b3b; 
+    @media screen and (max-width:$bubble-colapse) {
+        
+    }
     .left-box {
         background-color: #3b3b3b;
         float: left;
@@ -144,6 +146,8 @@ $mobile-small: 450px;
         @media screen and (max-width:$bubble-colapse) {
             width: 100%; 
             padding: 20px;
+            position: relative;
+            top: 280px;
         }
         
        
@@ -176,6 +180,8 @@ $mobile-small: 450px;
         @media screen and (max-width:$bubble-colapse) {
             width: 100%;    
             height: 300px;
+            position: relative;
+            top: -600px;
         }
         
         .vert-head {
