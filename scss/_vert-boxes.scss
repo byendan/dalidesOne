@@ -221,6 +221,7 @@ $mobile-small: 450px;
 }
 
 .box-overlay {
+    background-color: rgba(0, 0, 0, 0.21);
     @media screen and (min-width:$bubble-colapse){
         width: 100%;
         height: 100%;

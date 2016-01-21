@@ -443,10 +443,12 @@ html, body {
         .verticle-two .right-box .vert-text {
           margin-top: 5%; } }
 
-@media screen and (min-width: 962px) {
-  .box-overlay {
-    width: 100%;
-    height: 100%; } }
+.box-overlay {
+  background-color: rgba(0, 0, 0, 0.21); }
+  @media screen and (min-width: 962px) {
+    .box-overlay {
+      width: 100%;
+      height: 100%; } }
 
 .about-section .about-bar {
   display: inline-block;
