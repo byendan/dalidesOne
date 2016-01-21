@@ -20,7 +20,8 @@ $infocol-color: #ffffff;
 .post-header-bar {
     position: relative;
     margin-top: -25px;
-    background-color: #2A2826;
+    background-image: url('../img/binding_dark.png');
+    background-repeat: repeat;
     height: 100px;
     font-family: 'Lato', sans-serif;
     color: white;
@@ -29,7 +30,6 @@ $infocol-color: #ffffff;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 3px;
-    border-bottom: solid 5px #90CF8A;
     
     @media screen and (max-width:416px) {
         height: 140px;
@@ -37,6 +37,7 @@ $infocol-color: #ffffff;
     
     h1 {
         color: #F7992E;
+       
     }
     
     P {
@@ -63,8 +64,9 @@ $infocol-color: #ffffff;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 3px;
-    background-color: #3b3b3b;
-    border-bottom: solid 5px #DC3E32;
+    background-image: url('../img/footer_lodyas.png');
+    background-repeat: repeat;
+    border-left: solid 5px #DC3E32;
     
     @media screen and (max-width:552px) {
         height: 140px;
@@ -127,7 +129,7 @@ $infocol-color: #ffffff;
                 margin-top: 100px;
                 width: 200px;
                 height: 200px;
-                background-color: rgba(144, 207, 138, 0.77);
+                //background-color: rgba(144, 207, 138, 0.77);
                 border: solid 4px rgb(247, 153, 46);
                 box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
                 text-align: center;
@@ -149,12 +151,7 @@ $infocol-color: #ffffff;
                         color: #DC3E32;
                     }
                 }
-                
-            
             }
-            
-           
-            
           
             .bub-txt-box {
                 margin-top: 15px;
@@ -188,13 +185,11 @@ $infocol-color: #ffffff;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 400;
                 letter-spacing: 0px;
-                
             }
             
             .bubble-text {
                 font-family: 'Lato', sans-serif;
                 position: absolute;
-                
                 font-weight: 300;
                 font-size: 20px;
                 padding-left: 10px;
@@ -206,13 +201,12 @@ $infocol-color: #ffffff;
                 @media screen and (max-width:$bubble-colapse){
                     margin-right: 20px;
                 }
-                
             }
             
         }
+        
         .post-head-col:last-child .bubble span {
                 margin-left: 15px;
             }
-    
     }
 }

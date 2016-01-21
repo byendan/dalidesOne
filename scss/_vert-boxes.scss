@@ -49,7 +49,8 @@ $mobile-small: 450px;
 .verticle-one {
     
     .left-box {
-        background-color: #2A2826;  
+        background-color: #313131; 
+        border-left: solid 5px #DC3E32;
         
         .vert-head {
             font-family: 'Cantarell', sans-serif;
@@ -65,15 +66,16 @@ $mobile-small: 450px;
         }
         
         .vert-line {
-            width: 80%;
-            margin-left: 5%;
+            width: 20%;
+            margin-left: 45%;
+            margin-top: 35px;
         }
         
         .vert-text {
             font-family: 'Lato', sans-serif;
             color: white;
             font-weight: 300;
-            font-size: 2.4em;
+            font-size: 1.8em;
             margin-left: 7%;
             padding-right: 5px;
             margin-top: 10%;
@@ -135,12 +137,10 @@ $mobile-small: 450px;
 }
 
 .verticle-two {
-    background-color: #3b3b3b; 
-    @media screen and (max-width:$bubble-colapse) {
-        
-    }
+    background-color: #363636; 
+    
     .left-box {
-        background-color: #3b3b3b;
+        background-color: #363636;
         float: left;
         width: 60%;
         @media screen and (max-width:$bubble-colapse) {
@@ -174,9 +174,10 @@ $mobile-small: 450px;
     }
     
     .right-box {
+        border-right: solid 5px #DC3E32;
         float: right;
         width: 40%;
-        background-color: #3b3b3b;
+        background-color: #363636;
         @media screen and (max-width:$bubble-colapse) {
             width: 100%;    
             height: 300px;
@@ -198,15 +199,16 @@ $mobile-small: 450px;
         }
         
         .vert-line {
-            width: 80%;
-            margin-left: 5%;
+            width: 20%;
+            margin-left: 15%;
+            margin-top: 35px;
         }
         
         .vert-text {
             font-family: 'Lato', sans-serif;
             color: white;
             font-weight: 300;
-            font-size: 2.4em;
+            font-size: 1.8em;
             margin-left: 7%;
             padding-right: 5px;
             margin-top: 10%;

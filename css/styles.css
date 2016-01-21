@@ -144,7 +144,8 @@ html, body {
 .post-header-bar {
   position: relative;
   margin-top: -25px;
-  background-color: #2A2826;
+  background-image: url("../img/binding_dark.png");
+  background-repeat: repeat;
   height: 100px;
   font-family: 'Lato', sans-serif;
   color: white;
@@ -152,8 +153,7 @@ html, body {
   font-size: 2.4em;
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 3px;
-  border-bottom: solid 5px #90CF8A; }
+  padding-bottom: 3px; }
   @media screen and (max-width: 416px) {
     .post-header-bar {
       height: 140px; } }
@@ -179,8 +179,9 @@ html, body {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 3px;
-  background-color: #3b3b3b;
-  border-bottom: solid 5px #DC3E32; }
+  background-image: url("../img/footer_lodyas.png");
+  background-repeat: repeat;
+  border-left: solid 5px #DC3E32; }
   @media screen and (max-width: 552px) {
     .post-bubble-bar {
       height: 140px; } }
@@ -230,7 +231,6 @@ html, body {
         margin-top: 100px;
         width: 200px;
         height: 200px;
-        background-color: rgba(144, 207, 138, 0.77);
         border: solid 4px #f7992e;
         box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
         text-align: center;
@@ -323,7 +323,8 @@ html, body {
         width: 100%; } }
 
 .verticle-one .left-box {
-  background-color: #2A2826; }
+  background-color: #313131;
+  border-left: solid 5px #DC3E32; }
   .verticle-one .left-box .vert-head {
     font-family: 'Cantarell', sans-serif;
     color: white;
@@ -335,13 +336,14 @@ html, body {
       .verticle-one .left-box .vert-head {
         margin-top: 5%; } }
   .verticle-one .left-box .vert-line {
-    width: 80%;
-    margin-left: 5%; }
+    width: 20%;
+    margin-left: 45%;
+    margin-top: 35px; }
   .verticle-one .left-box .vert-text {
     font-family: 'Lato', sans-serif;
     color: white;
     font-weight: 300;
-    font-size: 2.4em;
+    font-size: 1.8em;
     margin-left: 7%;
     padding-right: 5px;
     margin-top: 10%; }
@@ -382,9 +384,9 @@ html, body {
         margin-top: -60px; } }
 
 .verticle-two {
-  background-color: #3b3b3b; }
+  background-color: #363636; }
   .verticle-two .left-box {
-    background-color: #3b3b3b;
+    background-color: #363636;
     float: left;
     width: 60%; }
     @media screen and (max-width: 962px) {
@@ -408,9 +410,10 @@ html, body {
           background-size: contain;
           background-color: #3b3b3b; } }
   .verticle-two .right-box {
+    border-right: solid 5px #DC3E32;
     float: right;
     width: 40%;
-    background-color: #3b3b3b; }
+    background-color: #363636; }
     @media screen and (max-width: 962px) {
       .verticle-two .right-box {
         width: 100%;
@@ -428,13 +431,14 @@ html, body {
         .verticle-two .right-box .vert-head {
           margin-top: 5%; } }
     .verticle-two .right-box .vert-line {
-      width: 80%;
-      margin-left: 5%; }
+      width: 20%;
+      margin-left: 15%;
+      margin-top: 35px; }
     .verticle-two .right-box .vert-text {
       font-family: 'Lato', sans-serif;
       color: white;
       font-weight: 300;
-      font-size: 2.4em;
+      font-size: 1.8em;
       margin-left: 7%;
       padding-right: 5px;
       margin-top: 10%; }
@@ -457,8 +461,9 @@ html, body {
   height: auto;
   overflow: auto;
   padding: 15px;
-  background-color: white;
-  border-bottom: solid 5px #FED136;
+  background-image: url("../img/new_year_background.png");
+  background-repeat: repeat;
+  border-left: solid 5px #FED136;
   font-family: 'Lato', sans-serif; }
   .about-section .about-bar h1 {
     margin-left: 75px; }
@@ -466,8 +471,10 @@ html, body {
       .about-section .about-bar h1 {
         margin-left: 2%; } }
 .about-section .about-area {
-  height: 550px;
-  margin-top: -5px; }
+  height: 505px;
+  margin-top: -5px;
+  overflow: hidden;
+  border-left: solid 5px #FED136; }
   .about-section .about-area .about-img {
     position: relative;
     z-index: 1;
@@ -475,7 +482,7 @@ html, body {
     background-image: url("../img/ocean1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 505px;
     width: 100%; }
   .about-section .about-area .about-text {
     position: relative;

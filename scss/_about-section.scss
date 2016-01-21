@@ -14,8 +14,10 @@ $bubble-colapse: 962px;
         height: auto;
         overflow: auto;
         padding: 15px;
-        background-color: white;
-        border-bottom: solid 5px #FED136;
+        //background-color: white;
+        background-image: url('../img/new_year_background.png');
+        background-repeat: repeat;
+        border-left: solid 5px #FED136;
         font-family: 'Lato', sans-serif;
         
         h1 {
@@ -28,9 +30,10 @@ $bubble-colapse: 962px;
     }
     
     .about-area {
-        height: 550px;
+        height: 505px;
         margin-top: -5px;
-        
+        overflow: hidden;
+        border-left: solid 5px #FED136;
         .about-img {
             position: relative;
             z-index: 1;
@@ -38,7 +41,7 @@ $bubble-colapse: 962px;
             background-image: url("../img/ocean1.jpg");
             background-size: cover;
             background-repeat: no-repeat;
-            height: 500px;
+            height: 505px;
             width: 100%; 
         }
         
