@@ -49,8 +49,7 @@ $mobile-small: 450px;
 .verticle-one {
     
     .left-box {
-        background-color: #313131; 
-        border-left: solid 5px #DC3E32;
+        background-color: #8D7B54;
         
         .vert-head {
             font-family: 'Cantarell', sans-serif;
@@ -138,7 +137,7 @@ $mobile-small: 450px;
 
 .verticle-two {
     background-color: #363636; 
-    
+     
     .left-box {
         background-color: #363636;
         float: left;
@@ -174,10 +173,9 @@ $mobile-small: 450px;
     }
     
     .right-box {
-        border-right: solid 5px #DC3E32;
         float: right;
         width: 40%;
-        background-color: #363636;
+        background-color: #8c3b0b;
         @media screen and (max-width:$bubble-colapse) {
             width: 100%;    
             height: 300px;
@@ -226,11 +224,11 @@ $mobile-small: 450px;
     @media screen and (min-width:$bubble-colapse){
         width: 100%;
         height: 100%;
-        transition: background-color 0.5s ease;
-        background-color: rgba(0, 0, 0, 0.67);
+        //transition: background-color 0.5s ease;
+        //background-color: rgba(0, 0, 0, 0.67);
         
         &:hover {
-            background-color: rgba(0, 0, 0, 0.42);
+            //background-color: rgba(0, 0, 0, 0.42);
         }   
     }
 }
