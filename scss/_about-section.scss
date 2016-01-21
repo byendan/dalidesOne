@@ -1,8 +1,18 @@
+@mixin round($value) {
+    -moz-border-radius: $value;
+	-webkit-border-radius: $value;
+	border-radius: $value;
+}
+
+$bubble-colapse: 962px;
+
 .about-section {
+    
     .about-bar {
         display: inline-block;
         width: 100%;
-        height: 100px;
+        height: auto;
+        overflow: auto;
         padding: 15px;
         background-color: white;
         border-bottom: solid 5px #FED136;
@@ -10,11 +20,16 @@
         
         h1 {
             margin-left: 75px;
+            
+            @media screen and (max-width:$bubble-colapse) {
+                margin-left: 2%;
+            }
         }
     }
     
     .about-area {
         height: 550px;
+        margin-top: -5px;
         
         .about-img {
             position: relative;
@@ -23,28 +38,39 @@
             background-image: url("../img/ocean1.jpg");
             background-size: cover;
             background-repeat: no-repeat;
-            height: 400px;
-            width: 100%;
-            
+            height: 500px;
+            width: 100%; 
         }
         
         .about-text {
             position: relative;
             z-index: 3;
-            background-color: rgba(59, 59, 59, 0.92);
+            background-color: rgba(255, 255, 255, 0.82);
             width: 60%;
-            height: 300px;
-            margin-left: 20%;
-            margin-top: -200px;
+            height: auto;
+            margin-left: 15%;
+            margin-top: -405px;
             padding: 10px;
-            padding-left: 15px;
-            padding-top: 15px;
-                
+            overflow: auto;
+            box-shadow: 5px 5px 10px; 
+            
             p {
-                color: white;
+                color: black;
                 font-family: 'Lato', sans-serif;
                 font-size: 2.2em;
+                font-weight: 400;
                 text-align: left;
+            }
+            
+            @media screen and (max-width:$bubble-colapse) {
+                width: 90%;
+                margin-left: 5%;
+                margin-top: -445px;
+                
+                p {
+                    font-size: 1.6em;
+                    font-weight: 300;
+                }
             }
         }
         
