@@ -31,7 +31,10 @@ $("#arrow-left").click(function() {
 function MoveRight() {
     if(cur != 2) {
         $("#bub-icon").removeClass(info[cur].icon);
+        $(".circle.active").toggleClass("active");
         cur += 1;
+        var active = cur + 2;
+        $(".circle:nth-child(" + active + ")").toggleClass("active");
         $("#bub-title").text(info[cur].title);
         $("#bub-text").text(info[cur].text);
         $("#bub-icon").addClass(info[cur].icon);
@@ -45,7 +48,10 @@ function MoveRight() {
 function MoveLeft() {
     if(cur != 0) {
         $("#bub-icon").removeClass(info[cur].icon);
+        $(".circle.active").toggleClass("active");
         cur -= 1;
+        var active = cur + 2;
+        $(".circle:nth-child(" + active + ")").toggleClass("active");
         $("#bub-title").text(info[cur].title);
         $("#bub-text").text(info[cur].text);
         $("#bub-icon").addClass(info[cur].icon);

@@ -292,6 +292,64 @@ html, body {
     .bubble-box .bubble-area .post-head-col:last-child .bubble span {
       margin-left: 15px; }
 
+.bub-info-area .bub-title-box {
+  display: inline-block;
+  width: auto;
+  overflow: auto;
+  height: 75px;
+  padding: 10px;
+  border: solid 1px black; }
+  .bub-info-area .bub-title-box h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.8em; }
+.bub-info-area .bub-text-area {
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  overflow: auto; }
+  .bub-info-area .bub-text-area p {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.0em;
+    font-weight: 300; }
+.bub-info-area .bub {
+  width: 200px;
+  height: 200px;
+  border: solid 4px #f7992e;
+  box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
+  text-align: center;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%; }
+  .bub-info-area .bub span {
+    font-size: 100px;
+    margin-top: 50px;
+    -webkit-transition: color 1s;
+    transition: color 1s; }
+  .bub-info-area .bub:hover {
+    cursor: pointer; }
+    .bub-info-area .bub:hover span {
+      color: #DC3E32; }
+.bub-info-area .bub-toggle {
+  display: block;
+  font-size: 1.6em; }
+  .bub-info-area .bub-toggle .tog-row {
+    display: inline-block;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px; }
+  .bub-info-area .bub-toggle .circle {
+    border: solid 2px #f7992e;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px; }
+    .bub-info-area .bub-toggle .circle span {
+      margin-top: 10px; }
+  .bub-info-area .bub-toggle .active {
+    background-color: rgba(144, 207, 138, 0.77); }
+
 .vert {
   width: 100%;
   border-top: solid 1px grey;

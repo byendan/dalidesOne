@@ -210,3 +210,89 @@ $infocol-color: #ffffff;
             }
     }
 }
+
+
+
+
+// New bubble area
+
+.bub-info-area {
+    
+    .bub-title-box {
+        display: inline-block;
+        width: auto;
+        overflow: auto;
+        height: 75px;
+        padding: 10px;
+        border: solid 1px black;
+    
+        h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8em;
+        }
+    }
+    
+    .bub-text-area {
+        display: inline-block;
+        width: 300px;
+        height: auto;
+        overflow: auto;
+        
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.0em;
+            font-weight: 300;
+        }
+        
+    }
+    
+    .bub {
+        width: 200px;
+        height: 200px;
+        //background-color: rgba(144, 207, 138, 0.77);
+        border: solid 4px rgb(247, 153, 46);
+        box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
+        text-align: center;
+        @include round(100%);
+        
+        span {
+            font-size: 100px;
+            margin-top: 50px;
+            @include bubble-color(1s);
+        }
+        &:hover {
+            cursor: pointer;
+            span {
+                color: #DC3E32;
+            }
+        }
+    }
+    
+    .bub-toggle {
+        display: block;
+        font-size: 1.6em;
+        
+        .tog-row {
+            display: inline-block;
+            @include round(100%);
+            text-align: center;
+            margin: 10px;
+            margin-top: 20px;
+        }
+        
+        .circle {
+            border: solid 2px rgb(247, 153, 46);
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            
+            span {
+                margin-top: 10px;
+            }
+        }
+        
+        .active {
+            background-color: rgba(144, 207, 138, 0.77);
+        }
+    }
+}
