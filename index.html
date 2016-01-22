@@ -28,7 +28,7 @@
     
     <link href='https://fonts.googleapis.com/css?family=Cantarell:400,400italic' rel='stylesheet' type='text/css'>
     
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300, 700' rel='stylesheet' type='text/css'>
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -112,70 +112,31 @@
         </div>
         
         <div class="bub">
-            <span class="fa" id="bub-icon"></span>
+            <div class="bub-overlay">
+                <span class="fa" id="bub-icon"></span>
+            </div>
         </div>
         <div class="bub-toggle">
             <div class="tog-row">
-                <span class="fa fa-arrow-circle-left" id="arrow-left"></span>
+                <span class="fa fa-chevron-left arrow" id="arrow-left"></span>
             </div>
             <div class="tog-row circle active">
-                <span class="fa fa-paint-brush"></span>
+                
             </div>
             <div class="tog-row circle">
-                <span class="fa fa-cogs"></span>
+                
             </div>
             <div class="tog-row circle">
-                <span class="fa fa-tablet"></span>
+                
             </div>
             <div class="tog-row">
-                <span class="fa fa-arrow-circle-right" id="arrow-right"></span>
+                <span class="fa fa-chevron-right arrow active" id="arrow-right"></span>
             </div> 
             
         </div>
         
     
     </div>
-    
-    <div class="bubble-box">
-    
-        <div class="bubble-area">
-        
-            <div class="content-a post-head-col">
-                <div class="bubble" id="bubble-1">
-                    <span class="fa fa-paint-brush"></span>
-                </div>
-               <div class="bub-txt-box">
-                    <h2 class="bubble-title">Design</h2>
-                    <p class="bubble-text">We take inspiration from the latest designs accross the web to make sure your site looks professional and modern</p>
-                </div>
-            </div>
-            
-            <div class="content-b post-head-col">
-                <div class="bubble" id="bubble-2">
-                    <span class="fa fa-cogs"></span>
-                </div>
-                
-                <div class="bub-txt-box">
-                    <h2 class="bubble-title">Functionality</h2>
-                    <p class="bubble-text">Researching the newest tools, and using fall back methods and designs makes sure your website works on browsers new and old</p>
-                </div>
-            </div>
-            
-            <div class="content-b post-head-col">
-                <div class="bubble" id="bubble-3">
-                    <span class="fa fa-tablet"></span>
-                </div>
-                
-                <div class="bub-txt-box">
-                    <h2 class="bubble-title">Mobile Ready</h2>
-                    <p class="bubble-text">Now over one third of all internet traffic comes from mobile devices. We make sure your website looks great on all screens big and small</p>
-                
-                </div>
-            </div>
-        
-        </div>
-
-     </div>
     
     <div class="post-bubble-bar">
         <h1>Your website will make a statement</h1>
@@ -214,7 +175,9 @@
     
     <div class="about-section">
         <div class="about-bar">
-            <h1>About Dali Designs</h1>
+            <div class="about-bar-overlay">
+                <h1>About Dali Designs</h1>           
+            </div>
         </div>
         <div class="about-area">
             <div class="about-img"></div>
@@ -231,6 +194,7 @@
     
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

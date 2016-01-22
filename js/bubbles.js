@@ -18,8 +18,15 @@ $("#bub-title").text(one.title);
 $("#bub-text").text(one.text);
 $("#bub-icon").addClass(one.icon);
 
-$("#arrow-right").css("color", "#DC3E32");
+//$(".bub-info-area").on("swipeleft", MoveRight());
+//$(".bub-info-area").on("swiperight", MoveLeft());
 
+$(document).on("swipeleft", ".bub-info-area", function() {
+    MoveRight();
+});
+$(document).on("swiperight", ".bub-info-area", function() {
+    MoveLeft();
+});
 $("#arrow-right").click(function() {
     MoveRight();
 });
@@ -33,15 +40,17 @@ function MoveRight() {
         $("#bub-icon").removeClass(info[cur].icon);
         $(".circle.active").toggleClass("active");
         cur += 1;
+        if(cur == 1) {
+            $("#arrow-left").addClass("active");
+        }
         var active = cur + 2;
         $(".circle:nth-child(" + active + ")").toggleClass("active");
         $("#bub-title").text(info[cur].title);
         $("#bub-text").text(info[cur].text);
         $("#bub-icon").addClass(info[cur].icon);
         if(cur == 2) {
-            $("#arrow-right").css("color", "rgb(51, 51, 51)");
+            $("#arrow-right").removeClass("active");
         } 
-        $("#arrow-left").css("color", "#DC3E32");
     }
 }
 
@@ -50,14 +59,17 @@ function MoveLeft() {
         $("#bub-icon").removeClass(info[cur].icon);
         $(".circle.active").toggleClass("active");
         cur -= 1;
+        if(cur == 1) {
+            $("#arrow-right").addClass("active");
+        }
         var active = cur + 2;
         $(".circle:nth-child(" + active + ")").toggleClass("active");
         $("#bub-title").text(info[cur].title);
         $("#bub-text").text(info[cur].text);
         $("#bub-icon").addClass(info[cur].icon);
         if(cur == 0) {
-            $("#arrow-left").css("color", "rgb(51, 51, 51)");
+            $("#arrow-left").removeClass("active");
         }
-        $("#arrow-right").css("color", "#DC3E32");
+        
     }
 }

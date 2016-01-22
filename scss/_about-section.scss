@@ -13,12 +13,17 @@ $bubble-colapse: 962px;
         width: 100%;
         height: auto;
         overflow: auto;
-        padding: 15px;
-        //background-color: white;
-        background-image: url('../img/new_year_background.png');
+        background-image: url('../img/triangular.png');
         background-repeat: repeat;
         border-left: solid 5px #FED136;
         font-family: 'Lato', sans-serif;
+        
+        .about-bar-overlay {
+            padding: 15px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
         
         h1 {
             margin-left: 75px;

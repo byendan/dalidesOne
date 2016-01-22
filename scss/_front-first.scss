@@ -5,11 +5,13 @@
 }
 
 @mixin bubble-color($t) {
-    
     -webkit-transition: color $t;
-    transition: color $t;
-        
-    
+    transition: color $t;  
+}
+
+@mixin arrow-back($time) {
+    -webkit-transition: background-color $time;
+    transition: background-color $time;  
 }
 
 $bubble-colapse: 982px;
@@ -20,7 +22,7 @@ $infocol-color: #ffffff;
 .post-header-bar {
     position: relative;
     margin-top: -25px;
-    background-image: url('../img/binding_dark.png');
+    background-image: url('../img/footer_lodyas.png');
     background-repeat: repeat;
     height: 100px;
     font-family: 'Lato', sans-serif;
@@ -36,8 +38,7 @@ $infocol-color: #ffffff;
     }
     
     h1 {
-        color: #F7992E;
-       
+        color: white;
     }
     
     P {
@@ -58,7 +59,7 @@ $infocol-color: #ffffff;
     height: 100px;
     margin-bottom: -1px;
     font-family: 'Lato', sans-serif;
-    color: #F7992E;
+    color: white;
     font-weight: 300;
     font-size: 2.4em;
     text-align: center;
@@ -72,168 +73,38 @@ $infocol-color: #ffffff;
         height: 140px;
     }
 }
-.bubble-box {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    height: 600px;
-    background-color: $infocol-color;
-    
-    @media screen and (max-width:$bubble-colapse) {
-        height: 1600px;
-    }
-    
-    .bubble-area {
-        background-color: transparent;
-        height: 600px;
-        padding-left: 10px;
-        padding-right: 10px;
-        display: inline-block;
-        letter-spacing: 20px;
-        position: relative;
-
-        @media screen and (max-width:$bubble-colapse) {
-            width: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 80px;
-            height: 1500px;
-        }
-        
-        
-    
-        .post-head-col {
-            display: inline-block;
-            height: 600px;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 0;
-            max-width: 30%;
-            min-width: $min-bubble;
-           
-            
-            
-            @media screen and (max-width:$bubble-colapse){
-                max-width: 100%;
-                min-width: 100%;
-                height: 500px;
-                
-            }
-        
-    
-            .bubble {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 100px;
-                width: 200px;
-                height: 200px;
-                //background-color: rgba(144, 207, 138, 0.77);
-                border: solid 4px rgb(247, 153, 46);
-                box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
-                text-align: center;
-                @include round(100%);
-                
-                @media screen and (max-width:$bubble-colapse){
-                    margin-top: 20px;
-                }
-            
-                span {
-                    font-size: 100px;
-                    margin-top: 50px;
-                    @include bubble-color(1s);
-                }
-                
-                &:hover {
-                    cursor: pointer;
-                    span {
-                        color: #DC3E32;
-                    }
-                }
-            }
-          
-            .bub-txt-box {
-                margin-top: 15px;
-                padding: 3px;
-                padding-top: 1px;
-                border: solid 1px grey;
-                height: 40%;
-                width: 100%;
-                display: inline-block;
-                @include round(5px);
-                box-shadow: 0px 0px 5px rgb(0, 0, 0);
-                text-align: justify;
-                
-                @media screen and (max-width: 400px){
-                    height: 45%;
-                }
-                
-                @media screen and (min-width: 641px){
-                    height: 35%;
-                }
-                
-                @media screen and (min-width:$bubble-colapse){
-                    position: relative;
-                    bottom: 0px;
-                    height: 41%;
-                }
-                
-            }
-            
-            h2 {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 400;
-                letter-spacing: 0px;
-            }
-            
-            .bubble-text {
-                font-family: 'Lato', sans-serif;
-                position: absolute;
-                font-weight: 300;
-                font-size: 20px;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-top: 10px;
-                margin-bottom: 0px;
-                letter-spacing: 0px;
-               
-                @media screen and (max-width:$bubble-colapse){
-                    margin-right: 20px;
-                }
-            }
-            
-        }
-        
-        .post-head-col:last-child .bubble span {
-                margin-left: 15px;
-            }
-    }
-}
-
-
-
-
-// New bubble area
 
 .bub-info-area {
+    width: 100%;
+    height: 600px;
+    position: relative;
     
     .bub-title-box {
         display: inline-block;
         width: auto;
-        overflow: auto;
-        height: 75px;
+        height: auto;
+        margin-top: 75px;
+        margin-left: 5%;
         padding: 10px;
-        border: solid 1px black;
+        border: solid 2px black;
+        box-shadow: 2px 2px 5px black;
     
-        h1 {
+        h2 {
             font-family: 'Lato', sans-serif;
             font-size: 2.8em;
+            font-weight: 700;
+        }
+        
+        @media screen and (max-width:$bubble-colapse) {
+            margin-top: 100px;
         }
     }
     
     .bub-text-area {
-        display: inline-block;
+        display: block;
+        position: absolute;
+        top: 180px;
+        margin-left: 30%;
         width: 300px;
         height: auto;
         overflow: auto;
@@ -244,20 +115,44 @@ $infocol-color: #ffffff;
             font-weight: 300;
         }
         
+        @media screen and (max-width:$bubble-colapse) {
+            margin-left: 15%;
+            top: 220px;
+        }
+        
+        @media screen and (max-width:365px) {
+            width: 260px;
+            
+            p {
+                font-size: 1.8em;
+            }
+        }
+        
     }
     
     .bub {
-        width: 200px;
-        height: 200px;
-        //background-color: rgba(144, 207, 138, 0.77);
-        border: solid 4px rgb(247, 153, 46);
-        box-shadow: 0px 0px 5px rgba(247, 153, 46, 0.53);
+        display: block;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        margin-left: 70%;
+        top: 100px;
         text-align: center;
-        @include round(100%);
+        @include round(30%);
+        background-image: url("../img/noisy.png");
+        background-repeat: repeat;
+        box-shadow: 1px 1px 5px rgba(111, 111, 111, 0.74);
+        
+        .bub-overlay {
+            width: 100%;
+            height: 100%;
+            @include round(30%);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
         
         span {
-            font-size: 100px;
-            margin-top: 50px;
+            font-size: 150px;
+            margin-top: 75px;
             @include bubble-color(1s);
         }
         &:hover {
@@ -266,33 +161,50 @@ $infocol-color: #ffffff;
                 color: #DC3E32;
             }
         }
+        
+        @media screen and (max-width:$bubble-colapse) {
+            display: none;
+        }
     }
     
     .bub-toggle {
-        display: block;
+        position: absolute;
+        bottom: 40px;
         font-size: 1.6em;
+        text-align: center;
+        margin-left: 25%;
+        
+        &:hover {
+            cursor: pointer;
+        }
         
         .tog-row {
             display: inline-block;
-            @include round(100%);
             text-align: center;
             margin: 10px;
-            margin-top: 20px;
-        }
-        
-        .circle {
-            border: solid 2px rgb(247, 153, 46);
-            width: 50px;
-            height: 50px;
-            margin-top: 10px;
             
-            span {
-                margin-top: 10px;
+            .arrow {
+                position: relative;
+                bottom: 7px;
+                @include round(5px);
+                color: #d9d9d9;
+            }
+            
+            .active {
+                color: #333333;
+                background-color: white;
             }
         }
         
+        .circle {
+            @include round(100%);
+            border: solid 2px rgb(247, 153, 46);
+            width: 15px;
+            height: 15px;
+        }
+        
         .active {
-            background-color: rgba(144, 207, 138, 0.77);
+            background-color: rgb(247, 153, 46);
         }
     }
 }
