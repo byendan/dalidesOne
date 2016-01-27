@@ -14,16 +14,25 @@
     transition: background-color $time;  
 }
 
+@mixin back-gradient($direction, $color1, $color2) {
+    background: -webkit-linear-gradient($direction, $color1, $color2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($direction, $color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($direction, $color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($direction, $color1, $color2);
+}
+
 $bubble-colapse: 982px;
 $min-bubble: 305px;
-$infocol-color: #ffffff;
+$infocol-color: #F2F2F2;
 
 
 .post-header-bar {
+    z-index: 5;
     position: relative;
     margin-top: -25px;
-    background-image: url('../img/footer_lodyas.png');
-    background-repeat: repeat;
+    //background-image: url('../img/footer_lodyas.png');
+    //background-repeat: repeat;
+    background-color: #3B3B3B;
     height: 100px;
     font-family: 'Lato', sans-serif;
     color: white;
@@ -55,8 +64,9 @@ $infocol-color: #ffffff;
 }
 
 .post-bubble-bar {
+    z-index: 1;
     position: relative;
-    height: 100px;
+    height: 500px;
     margin-bottom: -1px;
     font-family: 'Lato', sans-serif;
     color: white;
@@ -65,9 +75,11 @@ $infocol-color: #ffffff;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 3px;
-    background-image: url('../img/footer_lodyas.png');
-    background-repeat: repeat;
+    //background-image: url('../img/footer_lodyas.png');
+    //background-repeat: repeat;
     // button color #DC3E32;
+    background-color: #3B3B3B;
+    
     
     @media screen and (max-width:552px) {
         height: 140px;
@@ -76,18 +88,20 @@ $infocol-color: #ffffff;
 
 .bub-info-area {
     width: 100%;
-    height: 600px;
+    height: 550px;
     position: relative;
+    background-color: $infocol-color;
     
     .bub-title-box {
         display: inline-block;
+        background-color: white;
         width: auto;
         height: auto;
         margin-top: 75px;
-        margin-left: 5%;
+        margin-left: 10%;
         padding: 10px;
-        border: solid 2px black;
-        box-shadow: 2px 2px 5px black;
+        border: solid 2px rgba(0, 0, 0, 0.56);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.56);
     
         h2 {
             font-family: 'Lato', sans-serif;
@@ -104,8 +118,8 @@ $infocol-color: #ffffff;
         display: block;
         position: absolute;
         top: 180px;
-        margin-left: 30%;
-        width: 300px;
+        margin-left: 35%;
+        width: 500px;
         height: auto;
         overflow: auto;
         
@@ -113,6 +127,7 @@ $infocol-color: #ffffff;
             font-family: 'Lato', sans-serif;
             font-size: 2.0em;
             font-weight: 300;
+            color: #7b7b7b;
         }
         
         @media screen and (max-width:$bubble-colapse) {
@@ -127,51 +142,13 @@ $infocol-color: #ffffff;
                 font-size: 1.8em;
             }
         }
-        
-    }
-    
-    .bub {
-        display: block;
-        width: 300px;
-        height: 300px;
-        position: absolute;
-        margin-left: 70%;
-        top: 100px;
-        text-align: center;
-        @include round(30%);
-        background-image: url("../img/noisy.png");
-        background-repeat: repeat;
-        box-shadow: 1px 1px 5px rgba(111, 111, 111, 0.74);
-        
-        .bub-overlay {
-            width: 100%;
-            height: 100%;
-            @include round(30%);
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-        
-        span {
-            font-size: 150px;
-            margin-top: 75px;
-            @include bubble-color(1s);
-        }
-        &:hover {
-            cursor: pointer;
-            span {
-                color: #DC3E32;
-            }
-        }
-        
-        @media screen and (max-width:$bubble-colapse) {
-            display: none;
-        }
     }
     
     .bub-toggle {
         position: absolute;
-        bottom: 40px;
-        font-size: 1.6em;
-        text-align: center;
+        bottom: 20px;
+        width: 200px;
+        height: 40px;
         margin-left: 25%;
         
         &:hover {
@@ -180,31 +157,39 @@ $infocol-color: #ffffff;
         
         .tog-row {
             display: inline-block;
-            text-align: center;
-            margin: 10px;
+            position: relative;
+            float: left;
+            bottom: 0px;
+            width: 25px;
+            height: 25px;
+            margin-left: 5px;
+            padding: 0px;
             
             .arrow {
-                position: relative;
-                bottom: 7px;
-                @include round(5px);
+                width: 100%;
+                height: 100%;
                 color: #d9d9d9;
+                i {
+                    font-size: 1.6em;
+                }
+                
+                .active {
+                    color: #3B3B3B;
+                }
             }
             
-            .active {
-                color: #333333;
-                background-color: white;
+            .circle {
+                background-color: transparent;
+                border: solid 2px #ff8242;
+                margin-top: 5px;
+                width: 50%;
+                height: 50%;
+                @include round(100%);
             }
-        }
-        
-        .circle {
-            @include round(100%);
-            border: solid 2px rgb(247, 153, 46);
-            width: 15px;
-            height: 15px;
-        }
-        
-        .active {
-            background-color: rgb(247, 153, 46);
+            
+            .circle.active {
+                background-color: #ff8242;
+            }       
         }
     }
 }

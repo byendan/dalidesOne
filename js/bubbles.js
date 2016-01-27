@@ -1,22 +1,21 @@
 function bub_info(title, text, icon, id) {
     this.title = title;
     this.text = text;
-    this.icon = icon;
     this.id = id;
 }
 
-var one = new bub_info("Design", "We take inspiration from the latest designs accross the web to make sure your site looks professional and modern", "fa-paint-brush", 0);
+var one = new bub_info("Design", "We take inspiration from the latest designs accross the web, and expand on common layouts used in your industry, to make sure your site looks professional and modern.", 0);
 
-var two = new bub_info("Functionality", "Researching the newest tools, and using fall back methods and designs makes sure your website works on browsers new and old", "fa-cogs", 1);
+var two = new bub_info("Functionality", "We keep in mind that your potential clients use technology that came out anytime between yesterday and the 90's. We research the newest tools, and use fall back methods and designs makes sure your website works on browsers new and old.", 1);
 
-var three = new bub_info("Mobile Ready", "Now over one third of all internet traffic comes from mobile devices. We make sure your website looks great on all screens big and small", "fa-tablet", 2);
+var three = new bub_info("Mobile Ready", "Now over one third of all internet traffic comes from mobile devices. We make sure your website looks great on all screens big and small.", 2);
 
 var info = [one, two, three];
 var cur = 0;
 
 $("#bub-title").text(one.title);
 $("#bub-text").text(one.text);
-$("#bub-icon").addClass(one.icon);
+
 
 //$(".bub-info-area").on("swipeleft", MoveRight());
 //$(".bub-info-area").on("swiperight", MoveLeft());
@@ -37,17 +36,14 @@ $("#arrow-left").click(function() {
 
 function MoveRight() {
     if(cur != 2) {
-        $("#bub-icon").removeClass(info[cur].icon);
-        $(".circle.active").toggleClass("active");
+        $(".circle.active").removeClass("active");
         cur += 1;
         if(cur == 1) {
             $("#arrow-left").addClass("active");
         }
-        var active = cur + 2;
-        $(".circle:nth-child(" + active + ")").toggleClass("active");
+        $("#c" + cur).addClass("active");
         $("#bub-title").text(info[cur].title);
         $("#bub-text").text(info[cur].text);
-        $("#bub-icon").addClass(info[cur].icon);
         if(cur == 2) {
             $("#arrow-right").removeClass("active");
         } 
@@ -56,17 +52,14 @@ function MoveRight() {
 
 function MoveLeft() {
     if(cur != 0) {
-        $("#bub-icon").removeClass(info[cur].icon);
-        $(".circle.active").toggleClass("active");
+        $(".circle.active").removeClass("active");
         cur -= 1;
         if(cur == 1) {
             $("#arrow-right").addClass("active");
         }
-        var active = cur + 2;
-        $(".circle:nth-child(" + active + ")").toggleClass("active");
+        $("#c" + cur).addClass("active");
         $("#bub-title").text(info[cur].title);
         $("#bub-text").text(info[cur].text);
-        $("#bub-icon").addClass(info[cur].icon);
         if(cur == 0) {
             $("#arrow-left").removeClass("active");
         }

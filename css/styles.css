@@ -142,10 +142,10 @@ html, body {
   overflow-x: hidden; }
 
 .post-header-bar {
+  z-index: 5;
   position: relative;
   margin-top: -25px;
-  background-image: url("../img/footer_lodyas.png");
-  background-repeat: repeat;
+  background-color: #3B3B3B;
   height: 100px;
   font-family: 'Lato', sans-serif;
   color: white;
@@ -169,8 +169,9 @@ html, body {
     border-color: #DC3E32; }
 
 .post-bubble-bar {
+  z-index: 1;
   position: relative;
-  height: 100px;
+  height: 500px;
   margin-bottom: -1px;
   font-family: 'Lato', sans-serif;
   color: white;
@@ -179,25 +180,26 @@ html, body {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 3px;
-  background-image: url("../img/footer_lodyas.png");
-  background-repeat: repeat; }
+  background-color: #3B3B3B; }
   @media screen and (max-width: 552px) {
     .post-bubble-bar {
       height: 140px; } }
 
 .bub-info-area {
   width: 100%;
-  height: 600px;
-  position: relative; }
+  height: 550px;
+  position: relative;
+  background-color: #F2F2F2; }
   .bub-info-area .bub-title-box {
     display: inline-block;
+    background-color: white;
     width: auto;
     height: auto;
     margin-top: 75px;
-    margin-left: 5%;
+    margin-left: 10%;
     padding: 10px;
-    border: solid 2px black;
-    box-shadow: 2px 2px 5px black; }
+    border: solid 2px rgba(0, 0, 0, 0.56);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.56); }
     .bub-info-area .bub-title-box h2 {
       font-family: 'Lato', sans-serif;
       font-size: 2.8em;
@@ -209,14 +211,15 @@ html, body {
     display: block;
     position: absolute;
     top: 180px;
-    margin-left: 30%;
-    width: 300px;
+    margin-left: 35%;
+    width: 500px;
     height: auto;
     overflow: auto; }
     .bub-info-area .bub-text-area p {
       font-family: 'Lato', sans-serif;
       font-size: 2.0em;
-      font-weight: 300; }
+      font-weight: 300;
+      color: #7b7b7b; }
     @media screen and (max-width: 982px) {
       .bub-info-area .bub-text-area {
         margin-left: 15%;
@@ -226,70 +229,42 @@ html, body {
         width: 260px; }
         .bub-info-area .bub-text-area p {
           font-size: 1.8em; } }
-  .bub-info-area .bub {
-    display: block;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    margin-left: 70%;
-    top: 100px;
-    text-align: center;
-    -moz-border-radius: 30%;
-    -webkit-border-radius: 30%;
-    border-radius: 30%;
-    background-image: url("../img/noisy.png");
-    background-repeat: repeat;
-    box-shadow: 1px 1px 5px rgba(111, 111, 111, 0.74); }
-    .bub-info-area .bub .bub-overlay {
-      width: 100%;
-      height: 100%;
-      -moz-border-radius: 30%;
-      -webkit-border-radius: 30%;
-      border-radius: 30%;
-      background-color: rgba(255, 255, 255, 0.8); }
-    .bub-info-area .bub span {
-      font-size: 150px;
-      margin-top: 75px;
-      -webkit-transition: color 1s;
-      transition: color 1s; }
-    .bub-info-area .bub:hover {
-      cursor: pointer; }
-      .bub-info-area .bub:hover span {
-        color: #DC3E32; }
-    @media screen and (max-width: 982px) {
-      .bub-info-area .bub {
-        display: none; } }
   .bub-info-area .bub-toggle {
     position: absolute;
-    bottom: 40px;
-    font-size: 1.6em;
-    text-align: center;
+    bottom: 20px;
+    width: 200px;
+    height: 40px;
     margin-left: 25%; }
     .bub-info-area .bub-toggle:hover {
       cursor: pointer; }
     .bub-info-area .bub-toggle .tog-row {
       display: inline-block;
-      text-align: center;
-      margin: 10px; }
+      position: relative;
+      float: left;
+      bottom: 0px;
+      width: 25px;
+      height: 25px;
+      margin-left: 5px;
+      padding: 0px; }
       .bub-info-area .bub-toggle .tog-row .arrow {
-        position: relative;
-        bottom: 7px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
+        width: 100%;
+        height: 100%;
         color: #d9d9d9; }
-      .bub-info-area .bub-toggle .tog-row .active {
-        color: #333333;
-        background-color: white; }
-    .bub-info-area .bub-toggle .circle {
-      -moz-border-radius: 100%;
-      -webkit-border-radius: 100%;
-      border-radius: 100%;
-      border: solid 2px #f7992e;
-      width: 15px;
-      height: 15px; }
-    .bub-info-area .bub-toggle .active {
-      background-color: #f7992e; }
+        .bub-info-area .bub-toggle .tog-row .arrow i {
+          font-size: 1.6em; }
+        .bub-info-area .bub-toggle .tog-row .arrow .active {
+          color: #3B3B3B; }
+      .bub-info-area .bub-toggle .tog-row .circle {
+        background-color: transparent;
+        border: solid 2px #ff8242;
+        margin-top: 5px;
+        width: 50%;
+        height: 50%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        border-radius: 100%; }
+      .bub-info-area .bub-toggle .tog-row .circle.active {
+        background-color: #ff8242; }
 
 .vert {
   width: 100%;
@@ -321,7 +296,7 @@ html, body {
         width: 100%; } }
 
 .verticle-one .left-box {
-  background-color: #8D7B54; }
+  background-color: #7D914E; }
   .verticle-one .left-box .vert-head {
     font-family: 'Cantarell', sans-serif;
     color: white;
@@ -409,7 +384,7 @@ html, body {
   .verticle-two .right-box {
     float: right;
     width: 40%;
-    background-color: #8c3b0b; }
+    background-color: #C46433; }
     @media screen and (max-width: 962px) {
       .verticle-two .right-box {
         width: 100%;
