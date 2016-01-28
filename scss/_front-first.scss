@@ -66,19 +66,62 @@ $infocol-color: #F2F2F2;
 .post-bubble-bar {
     z-index: 1;
     position: relative;
-    height: 500px;
+    height: 400px;
+    width: 100%;
     margin-bottom: -1px;
     font-family: 'Lato', sans-serif;
     color: white;
     font-weight: 300;
     font-size: 2.4em;
-    text-align: center;
+    //text-align: center;
     padding-top: 10px;
     padding-bottom: 3px;
-    //background-image: url('../img/footer_lodyas.png');
-    //background-repeat: repeat;
+    background-image: url('../img/blueFocus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     // button color #DC3E32;
-    background-color: #3B3B3B;
+    
+    .pbb-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(41, 41, 41, 0.68);
+        margin-top: -10px;
+        
+        h1 {
+            position: relative;
+            top: 25px;
+            left: 20%;
+            font-weight: 300;
+            font-size: 1.6em;
+            color: #F2F2F2;
+        }
+        
+        hr {
+            width: 50%;
+            margin-top: 35px;
+            border: solid 1px #7e7e7e;
+        }
+        
+        .pbb-text {
+            width: 70%;
+            margin-top: 60px;
+            text-align: justify;
+            padding: 15px;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            
+            h3 {
+                font-size: 1.0em;
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+            }
+        }
+        
+    }
+    
     
     
     @media screen and (max-width:552px) {
