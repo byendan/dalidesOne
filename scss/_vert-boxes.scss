@@ -10,50 +10,10 @@ $right-background-color: #C46433;
     width: 100%;
     border-top: solid 1px grey;
     background: #fcfcfc;
-   
-    .vert-box {
-        height: 600px;
-        display: inline-block;
-        
-    }
     
-    .vt-box {
-        @media screen and (max-width:$bubble-colapse) and (min-width:$vert-mobile-colapse) {
-            height: 300px;      
-        }
-        
-        @media screen and (max-width:$vert-mobile-colapse) {
-            height: 400px;
-        }
-        
-        @media screen and (max-width:$mobile-small) {
-            height: 500px;
-        }
-    }
-    
-    .left-box {
-        float: left;
+    .v-text {
         width: 40%;
-        @media screen and (max-width:$bubble-colapse) {
-            width: 100%;      
-        }
-    }
-    .right-box {
-        float: right;
-        width: 60%;
-        @media screen and (max-width:$bubble-colapse) {
-            width: 100%; 
-        }
-    }
-    
-    
-}
-
-.verticle-one {
-    
-    .left-box {
-        //background-color: #8D7B54;
-        background-color: $left-background-color;
+        
         .vert-head {
             font-family: 'Cantarell', sans-serif;
             color: white;
@@ -63,14 +23,8 @@ $right-background-color: #C46433;
             margin-top: 20%;
             
             @media screen and (max-width:$bubble-colapse) {
-                margin-top: 5%;     
+                margin-top: 50px;
             }
-        }
-        
-        .vert-line {
-            width: 20%;
-            margin-left: 45%;
-            margin-top: 35px;
         }
         
         .vert-text {
@@ -79,22 +33,44 @@ $right-background-color: #C46433;
             font-weight: 300;
             font-size: 1.8em;
             margin-left: 7%;
+            margin-right: 4%;
             padding-right: 5px;
             margin-top: 10%;
-            
-            @media screen and (max-width:$bubble-colapse) {
-                margin-top: 5%;     
-            }
-            
         }
+        
+        .vert-line {
+            width: 20%;
+            margin-left: 15%;
+            margin-top: 35px;
+        }
+        
     }
     
-    .right-box {
-        background-color: #2A2826; 
+    .v-image {
+        width: 60%;
+        height: 600px;
+    }
+    
+    .v-text.one {
+        float: left;
+        background-color: $left-background-color;
+             
+    }
+    
+    .v-text.two {
+        float: right;
+        background-color: $right-background-color;
         
         @media screen and (max-width:$bubble-colapse) {
-            padding: 20px;
+            width: 100%;    
+            position: relative;
+            top: -600px;
         }
+        
+    }
+    
+    .v-image.one {
+        float: right;
         
         .vbr {
             background-image: url("../img/ov-test.png");
@@ -122,37 +98,15 @@ $right-background-color: #C46433;
                 background-color: #2A2826; 
                 
             }
-            
-            @media screen and (max-width: 890px) {
-                margin-top: -40px;
-            }
-            
-            @media screen and (max-width: 500px) {
-                margin-top: -60px;
-            }
-        
-        
         }
     }
     
-    
-}
-
-.verticle-two {
-    background-color: #363636; 
-     
-    .left-box {
-        background-color: #363636;
+    .v-image.two {
         float: left;
-        width: 60%;
-        @media screen and (max-width:$bubble-colapse) {
-            width: 100%; 
-            padding: 20px;
-            position: relative;
-            top: 280px;
-        }
         
-       
+        @media screen and (max-width:$bubble-colapse) {
+            position: relative;
+        }
         
         .vbl {
             background-image: url("../img/ps-test.png");
@@ -170,58 +124,29 @@ $right-background-color: #C46433;
                 background-size: contain;
                 background-color: #3b3b3b;
             }
-            
-            
         }
     }
     
-    .right-box {
-        float: right;
-        width: 40%;
-        //background-color: #8c3b0b;
-        background-color: $right-background-color;
-        @media screen and (max-width:$bubble-colapse) {
-            width: 100%;    
-            height: 300px;
-            position: relative;
-            top: -600px;
-        }
-        
-        .vert-head {
-            font-family: 'Cantarell', sans-serif;
-            color: white;
-            font-size: 3.2em;
-            font-style: italic;
-            margin-left: 5%;
-            margin-top: 20%;
-            
-            @media screen and (max-width:$bubble-colapse) {
-                margin-top: 5%;     
-            }
-        }
-        
-        .vert-line {
-            width: 20%;
-            margin-left: 15%;
-            margin-top: 35px;
-        }
-        
-        .vert-text {
-            font-family: 'Lato', sans-serif;
-            color: white;
-            font-weight: 300;
-            font-size: 1.8em;
-            margin-left: 7%;
-            padding-right: 5px;
-            margin-top: 10%;
-            
-            @media screen and (max-width:$bubble-colapse) {
-                margin-top: 5%;     
-            }
-            
-        }
+    .vert-box {
+        height: 600px;
+        display: inline-block;
     }
     
+    @media screen and (max-width:$bubble-colapse) {
+        height: auto;
+        
+        .v-text {
+            height: auto;
+            width: 100%;
+            padding-bottom: 50px;
+            padding-top: 20px;
+        }
+        
+        .v-image {
+            width: 100%;
+            padding: 20px;
+        }
+    }
 }
 
 .box-overlay {
