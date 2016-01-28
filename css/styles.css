@@ -303,7 +303,7 @@ html, body {
 .vert {
   width: 100%;
   border-top: solid 1px grey;
-  background: #fcfcfc; }
+  background-color: #2A2826; }
   .vert .v-text {
     width: 40%; }
     .vert .v-text .vert-head {
@@ -331,7 +331,8 @@ html, body {
       margin-top: 35px; }
   .vert .v-image {
     width: 60%;
-    height: 600px; }
+    height: 600px;
+    background-color: #2A2826; }
   .vert .v-text.one {
     float: left;
     background-color: #48726A; }
@@ -370,7 +371,8 @@ html, body {
     float: left; }
     @media screen and (max-width: 962px) {
       .vert .v-image.two {
-        position: relative; } }
+        position: relative;
+        margin-top: -1px; } }
     .vert .v-image.two .vbl {
       background-image: url("../img/ps-test.png");
       background-size: cover;
@@ -383,8 +385,7 @@ html, body {
           background-image: url("../img/ps-mobile.png"); } }
       @media screen and (max-width: 962px) {
         .vert .v-image.two .vbl {
-          background-size: contain;
-          background-color: #3b3b3b; } }
+          background-size: contain; } }
   .vert .vert-box {
     height: 600px;
     display: inline-block; }

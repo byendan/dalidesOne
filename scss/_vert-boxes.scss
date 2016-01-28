@@ -9,7 +9,7 @@ $right-background-color: #C46433;
     
     width: 100%;
     border-top: solid 1px grey;
-    background: #fcfcfc;
+    background-color: #2A2826;
     
     .v-text {
         width: 40%;
@@ -49,6 +49,7 @@ $right-background-color: #C46433;
     .v-image {
         width: 60%;
         height: 600px;
+        background-color: #2A2826;
     }
     
     .v-text.one {
@@ -103,9 +104,9 @@ $right-background-color: #C46433;
     
     .v-image.two {
         float: left;
-        
         @media screen and (max-width:$bubble-colapse) {
             position: relative;
+            margin-top: -1px;
         }
         
         .vbl {
@@ -122,7 +123,7 @@ $right-background-color: #C46433;
             
             @media screen and (max-width:$bubble-colapse) {
                 background-size: contain;
-                background-color: #3b3b3b;
+                //background-color: #3b3b3b;
             }
         }
     }
