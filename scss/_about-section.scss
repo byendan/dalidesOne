@@ -7,23 +7,15 @@
 $bubble-colapse: 962px;
 
 .about-section {
-    
+    background-color: #F2F2F2;
     .about-bar {
         display: inline-block;
         width: 100%;
         height: auto;
         overflow: auto;
-        background-image: url('../img/triangular.png');
-        background-repeat: repeat;
-        border-left: solid 5px #FED136;
+        margin-top: 65px;
         font-family: 'Lato', sans-serif;
         
-        .about-bar-overlay {
-            padding: 15px;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.85);
-        }
         
         h1 {
             margin-left: 75px;
@@ -32,41 +24,38 @@ $bubble-colapse: 962px;
                 margin-left: 2%;
             }
         }
+        
+        hr {
+            margin-top: 15px;
+            border: solid 1px #63988e;
+            width: 200px;
+            margin-left: 100px;
+        }
     }
     
     .about-area {
-        height: 505px;
+        height: auto;
         margin-top: -5px;
         overflow: hidden;
-        border-left: solid 5px #FED136;
-        .about-img {
-            position: relative;
-            z-index: 1;
-            display: inline-block;
-            background-image: url("../img/ocean1.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 505px;
-            width: 100%; 
-        }
+        padding-bottom: 80px;
+
+        
         
         .about-text {
             position: relative;
-            z-index: 3;
-            background-color: rgba(255, 255, 255, 0.82);
             width: 60%;
             height: auto;
-            margin-left: 15%;
-            margin-top: -405px;
             padding: 10px;
+            margin-left: 15%;
+            padding-right: 40px;
+            margin-top: 40px;
             overflow: auto;
-            box-shadow: 5px 5px 10px; 
             
             p {
                 color: black;
                 font-family: 'Lato', sans-serif;
                 font-size: 2.2em;
-                font-weight: 400;
+                font-weight: 300;
                 text-align: left;
             }
             
@@ -80,6 +69,15 @@ $bubble-colapse: 962px;
                     font-weight: 300;
                 }
             }
+        }
+        
+        .about-text.one {
+            border-right: solid 2px #FF8242;
+        }
+        
+        .about-text.two {
+            border-right: solid 2px #DC3E32;
+            margin-top: 60px;
         }
         
     }

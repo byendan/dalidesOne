@@ -188,7 +188,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(41, 41, 41, 0.68);
+    background-color: rgba(41, 41, 41, 0.56);
     margin-top: -10px; }
     .post-bubble-bar .pbb-overlay h1 {
       position: relative;
@@ -219,7 +219,7 @@ html, body {
 
 .bub-info-area {
   width: 100%;
-  height: 550px;
+  height: 600px;
   position: relative;
   background-color: #F2F2F2; }
   .bub-info-area .bub-title-box {
@@ -231,7 +231,10 @@ html, body {
     margin-left: 10%;
     padding: 10px;
     border: solid 2px rgba(0, 0, 0, 0.56);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.56); }
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.56);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; }
     .bub-info-area .bub-title-box h2 {
       font-family: 'Lato', sans-serif;
       font-size: 2.8em;
@@ -263,7 +266,7 @@ html, body {
           font-size: 1.8em; } }
   .bub-info-area .bub-toggle {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     width: 200px;
     height: 40px;
     margin-left: 25%; }
@@ -456,63 +459,57 @@ html, body {
       width: 100%;
       height: 100%; } }
 
-.about-section .about-bar {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  overflow: auto;
-  background-image: url("../img/triangular.png");
-  background-repeat: repeat;
-  border-left: solid 5px #FED136;
-  font-family: 'Lato', sans-serif; }
-  .about-section .about-bar .about-bar-overlay {
-    padding: 15px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.85); }
-  .about-section .about-bar h1 {
-    margin-left: 75px; }
-    @media screen and (max-width: 962px) {
-      .about-section .about-bar h1 {
-        margin-left: 2%; } }
-.about-section .about-area {
-  height: 505px;
-  margin-top: -5px;
-  overflow: hidden;
-  border-left: solid 5px #FED136; }
-  .about-section .about-area .about-img {
-    position: relative;
-    z-index: 1;
+.about-section {
+  background-color: #F2F2F2; }
+  .about-section .about-bar {
     display: inline-block;
-    background-image: url("../img/ocean1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 505px;
-    width: 100%; }
-  .about-section .about-area .about-text {
-    position: relative;
-    z-index: 3;
-    background-color: rgba(255, 255, 255, 0.82);
-    width: 60%;
+    width: 100%;
     height: auto;
-    margin-left: 15%;
-    margin-top: -405px;
-    padding: 10px;
     overflow: auto;
-    box-shadow: 5px 5px 10px; }
-    .about-section .about-area .about-text p {
-      color: black;
-      font-family: 'Lato', sans-serif;
-      font-size: 2.2em;
-      font-weight: 400;
-      text-align: left; }
-    @media screen and (max-width: 962px) {
-      .about-section .about-area .about-text {
-        width: 90%;
-        margin-left: 5%;
-        margin-top: -445px; }
-        .about-section .about-area .about-text p {
-          font-size: 1.6em;
-          font-weight: 300; } }
+    margin-top: 65px;
+    font-family: 'Lato', sans-serif; }
+    .about-section .about-bar h1 {
+      margin-left: 75px; }
+      @media screen and (max-width: 962px) {
+        .about-section .about-bar h1 {
+          margin-left: 2%; } }
+    .about-section .about-bar hr {
+      margin-top: 15px;
+      border: solid 1px #63988e;
+      width: 200px;
+      margin-left: 100px; }
+  .about-section .about-area {
+    height: auto;
+    margin-top: -5px;
+    overflow: hidden;
+    padding-bottom: 80px; }
+    .about-section .about-area .about-text {
+      position: relative;
+      width: 60%;
+      height: auto;
+      padding: 10px;
+      margin-left: 15%;
+      padding-right: 40px;
+      margin-top: 40px;
+      overflow: auto; }
+      .about-section .about-area .about-text p {
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-size: 2.2em;
+        font-weight: 300;
+        text-align: left; }
+      @media screen and (max-width: 962px) {
+        .about-section .about-area .about-text {
+          width: 90%;
+          margin-left: 5%;
+          margin-top: -445px; }
+          .about-section .about-area .about-text p {
+            font-size: 1.6em;
+            font-weight: 300; } }
+    .about-section .about-area .about-text.one {
+      border-right: solid 2px #FF8242; }
+    .about-section .about-area .about-text.two {
+      border-right: solid 2px #DC3E32;
+      margin-top: 60px; }
 
 /*# sourceMappingURL=styles.css.map */
