@@ -219,7 +219,8 @@ html, body {
 
 .bub-info-area {
   width: 100%;
-  height: 600px;
+  height: auto;
+  padding-bottom: 50px;
   position: relative;
   background-color: #F2F2F2; }
   .bub-info-area .bub-title-box {
@@ -244,7 +245,6 @@ html, body {
         margin-top: 100px; } }
   .bub-info-area .bub-text-area {
     display: block;
-    position: absolute;
     top: 180px;
     margin-left: 35%;
     width: 500px;
@@ -258,18 +258,18 @@ html, body {
     @media screen and (max-width: 982px) {
       .bub-info-area .bub-text-area {
         margin-left: 15%;
-        top: 220px; } }
+        top: 220px;
+        width: 75%; } }
     @media screen and (max-width: 365px) {
       .bub-info-area .bub-text-area {
         width: 260px; }
         .bub-info-area .bub-text-area p {
           font-size: 1.8em; } }
   .bub-info-area .bub-toggle {
-    position: absolute;
-    bottom: 70px;
     width: 200px;
     height: 40px;
-    margin-left: 25%; }
+    margin-left: 25%;
+    margin-top: 50px; }
     .bub-info-area .bub-toggle:hover {
       cursor: pointer; }
     .bub-info-area .bub-toggle .tog-row {

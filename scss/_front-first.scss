@@ -131,10 +131,12 @@ $infocol-color: #F2F2F2;
 
 .bub-info-area {
     width: 100%;
-    height: 600px;
-  
+    height: auto;
+    padding-bottom: 50px;
     position: relative;
     background-color: $infocol-color;
+    
+    
     
     .bub-title-box {
         display: inline-block;
@@ -161,23 +163,27 @@ $infocol-color: #F2F2F2;
     
     .bub-text-area {
         display: block;
-        position: absolute;
+        //position: absolute;
         top: 180px;
         margin-left: 35%;
         width: 500px;
         height: auto;
         overflow: auto;
         
+        
         p {
             font-family: 'Lato', sans-serif;
             font-size: 2.0em;
             font-weight: 300;
             color: #7b7b7b;
+            
+            
         }
         
         @media screen and (max-width:$bubble-colapse) {
             margin-left: 15%;
             top: 220px;
+            width: 75%;
         }
         
         @media screen and (max-width:365px) {
@@ -190,11 +196,13 @@ $infocol-color: #F2F2F2;
     }
     
     .bub-toggle {
-        position: absolute;
-        bottom: 70px;
+        //position: absolute;
+        //bottom: 70px;
         width: 200px;
         height: 40px;
         margin-left: 25%;
+        margin-top: 50px;
+        
         
         &:hover {
             cursor: pointer;
