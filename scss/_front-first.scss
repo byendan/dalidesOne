@@ -30,8 +30,6 @@ $infocol-color: #F2F2F2;
     z-index: 5;
     position: relative;
     margin-top: -25px;
-    //background-image: url('../img/footer_lodyas.png');
-    //background-repeat: repeat;
     background-color: #3B3B3B;
     height: 100px;
     font-family: 'Lato', sans-serif;
@@ -64,18 +62,10 @@ $infocol-color: #F2F2F2;
 }
 
 .post-bubble-bar {
-    z-index: 1;
-    position: relative;
-    height: 400px;
+    margin-top: -40px;
+    display: block;
+    height: auto;
     width: 100%;
-    margin-bottom: -1px;
-    font-family: 'Lato', sans-serif;
-    color: white;
-    font-weight: 300;
-    font-size: 2.4em;
-    //text-align: center;
-    padding-top: 10px;
-    padding-bottom: 3px;
     background-image: url('../img/blueFocus.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -83,19 +73,22 @@ $infocol-color: #F2F2F2;
     // button color #DC3E32;
     
     .pbb-overlay {
-        position: absolute;
+        margin-bottom: -1px;
         width: 100%;
         height: 100%;
         background-color: rgba(41, 41, 41, 0.56);
-        margin-top: -10px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
         
         h1 {
             position: relative;
             top: 25px;
-            left: 20%;
+            font-family: 'Lato', sans-serif;
             font-weight: 300;
-            font-size: 1.6em;
+            font-size: 3.0em;
             color: #F2F2F2;
+            max-width: 90%;
         }
         
         hr {
@@ -113,19 +106,18 @@ $infocol-color: #F2F2F2;
             margin-left: auto;
             margin-right: auto;
             
+            @media screen and (max-width:600px){
+                width: 90%;
+            }
+            
             h3 {
-                font-size: 1.0em;
+                font-size: 1.8em;
                 font-family: 'Lato', sans-serif;
                 font-weight: 300;
+                color: #fcfcfc;
             }
         }
         
-    }
-    
-    
-    
-    @media screen and (max-width:552px) {
-        height: 140px;
     }
 }
 
