@@ -1,12 +1,11 @@
-$(window).resize(function() {
-    if( $(window).width() < 962) {
-        var v_height = $(".v-text.two").height() + 69
-        $(".v-image.two").css("top", v_height+"px");
+$(window).resize(Fix());
+
+$(document).ready(Fix());
+
+
+function Fix() {
+    if ($(window).width() < 962) {
+        var v_height = $(".v-text.two").css("height");
+        $(".v-image.two").css("top", v_height);
     }
-});
-
-if ($(window).width() < 962) {
-    var v_height = $(".v-text.two").height() + 69
-    $(".v-image.two").css("top", v_height+"px");
 }
-

@@ -6,7 +6,6 @@ $left-background-color: #48726A;
 $right-background-color: #C46433;
 
 .vert {
-    
     width: 100%;
     border-top: solid 1px grey;
     background-color: #2A2826;
@@ -63,8 +62,8 @@ $right-background-color: #C46433;
         background-color: $right-background-color;
         
         @media screen and (max-width:$bubble-colapse) {
-            width: 100%;    
             position: relative;
+            clear: both;
             top: -600px;
         }
         
@@ -104,10 +103,11 @@ $right-background-color: #C46433;
     
     .v-image.two {
         float: left;
+        
         @media screen and (max-width:$bubble-colapse) {
             position: relative;
-            margin-top: -1px;
         }
+        
         
         .vbl {
             background-image: url("../img/ps-test.png");
@@ -135,15 +135,18 @@ $right-background-color: #C46433;
     
     @media screen and (max-width:$bubble-colapse) {
         height: auto;
-        
+     
         .v-text {
+            float: none;
             height: auto;
             width: 100%;
             padding-bottom: 50px;
-            padding-top: 20px;
+            padding-top: 70px;
+            
         }
         
         .v-image {
+            float: none;
             width: 100%;
             padding: 20px;
         }
@@ -162,4 +165,10 @@ $right-background-color: #C46433;
             //background-color: rgba(0, 0, 0, 0.42);
         }   
     }
+}
+
+body {
+    position: relative;
+    z-index: -20;
+    background-color: #2A2826;
 }

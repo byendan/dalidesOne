@@ -106,7 +106,7 @@
                 background-color: #03726F;
                 width: 20px;
                 border-radius: 10px;
-                @include scale-x(4);
+                @include scale-x(5);
             }      
         }
     }
@@ -161,7 +161,6 @@
     z-index: -5;
     
     .head-over {
-        position: absolute;
         width: 100%;
         height: 100%;
         background-color: rgba(78, 78, 78, 0.33);
